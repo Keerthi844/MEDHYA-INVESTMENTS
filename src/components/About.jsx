@@ -21,33 +21,29 @@ export default function AboutPage() {
     ];
 
     const teamMembers = [
+      
         {
-            name: "Hanna Richard",
-            role: "Credit Analyst",
-            image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=600&fit=crop"
-        },
-        {
-            name: "Adam Lewis",
+            name: "Sri Rakesh",
             role: "Financial Analyst",
             image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop"
         },
         {
-            name: "Roberto Clark",
+            name: "Yugendar",
             role: "Tax Specialist",
             image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=600&fit=crop"
         },
         {
-            name: "Diana Queen",
+            name: "Sri Swathi",
             role: "Cost Accountant",
             image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=600&fit=crop"
         },
         {
-            name: "Michael Johnson",
+            name: "Jaipal Reddy Naidi",
             role: "Investment Manager",
             image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&h=600&fit=crop"
         },
         {
-            name: "Sarah Parker",
+            name: "Devendar kodam",
             role: "Portfolio Manager",
             image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop"
         },

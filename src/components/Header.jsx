@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import medhyaLogo from '../assets/medhya_high_res-Photoroom.png'
+import medhyaLogo from "../assets/medhya_high_res.png"
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -10,7 +10,7 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         <div className="flex items-center gap-2">
           <img src={medhyaLogo} alt="Medhya Investments" className="h-12 w-auto" />
-          <Link to="/" className="text-xl font-bold text-green-700">Medhya Investments</Link>
+          
         </div>
 
         <button
@@ -33,11 +33,11 @@ export default function Header() {
             </svg>
           </button>
 
-          <Link to="/" className="block md:inline text-gray-600 hover:text-blue-600 px-4 py-2 md:p-0">Home</Link>
-          <Link to="/about" className="block md:inline text-gray-600 hover:text-blue-600 px-4 py-2 md:p-0">About</Link>
-          <Link to="/services" className="block md:inline text-gray-600 hover:text-blue-600 px-4 py-2 md:p-0">Services</Link>
-          <Link to="/pricing" className="block md:inline text-gray-600 hover:text-blue-600 px-4 py-2 md:p-0">Why Choose us</Link>
-          <Link to="/contact" className="block md:inline text-gray-600 hover:text-blue-600 px-4 py-2 md:p-0">Contact</Link>
+          <Link to="/" onClick={() => setMobileMenuOpen(false)} className="block md:inline text-gray-600 hover:text-blue-600 px-4 py-2 md:p-0">Home</Link>
+          <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="block md:inline text-gray-600 hover:text-blue-600 px-4 py-2 md:p-0">About</Link>
+          <Link to="/services" onClick={() => setMobileMenuOpen(false)} className="block md:inline text-gray-600 hover:text-blue-600 px-4 py-2 md:p-0">Services</Link>
+          <Link to="/pricing" onClick={() => setMobileMenuOpen(false)} className="block md:inline text-gray-600 hover:text-blue-600 px-4 py-2 md:p-0">Why Choose us</Link>
+          <Link to="/contact" onClick={() => setMobileMenuOpen(false)} className="block md:inline text-gray-600 hover:text-blue-600 px-4 py-2 md:p-0">Contact</Link>
         </div>
       </nav>
     </header>

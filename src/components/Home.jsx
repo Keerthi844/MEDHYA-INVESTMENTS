@@ -168,6 +168,12 @@ function WhatWeDo() {
         "Valuation & Exit Strategy",
         "Portfolio Optimization",
     ]
+    const extendedItems = [
+        "Deal Sourcing & Structuring",
+        "Due Diligence",
+        "Valuation & Exit Strategy",
+        "Portfolio Optimization",
+    ]
 
     return (
         <section className="py-20 bg-gray-50">
@@ -182,12 +188,14 @@ function WhatWeDo() {
                 </p>
 
                 {/* GRID */}
-                <div className="grid md:grid-cols-2 gap-10">
+                <div className="grid md:grid-cols-3 gap-10">
 
                     {/* CARD COMPONENT */}
                     {[
                         { title: "For Startups", items: startupItems },
-                        { title: "For Investors", items: investorItems }
+                        { title: "For Investors", items: investorItems },
+
+                        { title: "Extended Services", items: extendedItems }
                     ].map((card, index) => (
 
                         <motion.div
@@ -199,24 +207,19 @@ function WhatWeDo() {
                             className="relative group w-full h-full"
                         >
 
-                            {/* ROTATING BORDER */}
-                            <div className="absolute inset-0 rounded-2xl overflow-hidden">
-                                <div className="absolute w-[150%] h-[150%] bg-gradient-to-br from-green-400 via-emerald-500 to-green-700 animate-spin-slow"></div>
-                            </div>
-
-                            {/* INNER CARD */}
-                            <div className="relative bg-[#07182E] m-[3px] rounded-2xl p-8 h-full flex flex-col justify-between">
+                            {/* CARD */}
+                            <div className="relative bg-white border-2 border-gray-300 rounded-2xl p-8 h-full flex flex-col justify-between transition-all duration-300 hover:bg-gradient-to-br hover:from-green-50 hover:to-green-100 hover:border-green-500 hover:shadow-xl hover:-translate-y-2">
 
                                 <div>
-                                    <h3 className="text-2xl font-bold text-green-400 mb-6">
+                                    <h3 className="text-2xl font-bold text-green-600 mb-6 group-hover:text-green-700">
                                         {card.title}
                                     </h3>
 
                                     <ul className="space-y-4">
                                         {card.items.map((item, i) => (
                                             <li key={i} className="flex gap-3 items-start">
-                                                <FaCheckCircle className="text-green-400 mt-1" />
-                                                <span className="text-gray-300">{item}</span>
+                                                <FaCheckCircle className="text-green-500 mt-1 group-hover:text-green-600" />
+                                                <span className="text-gray-700 group-hover:text-gray-900">{item}</span>
                                             </li>
                                         ))}
                                     </ul>
@@ -345,96 +348,139 @@ function ServiceSnapshot() {
                 </motion.div>
 
                 {/* CARDS GRID */}
-                <div className="grid md:grid-cols-3 gap-6">
-                    {services.map((service, i) => (
-                       <motion.div
-                              key={i}
-                              initial={{ opacity: 0, y: 20 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ duration: 0.3 }}
-                              className="group bg-gray-100 rounded-2xl p-5 transition-all duration-500 hover:bg-gradient-to-br hover:from-green-900 hover:to-green-700 hover:text-white hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
-                                onClick={() => setSelected(service)}
->
-                            <h3 className="text-lg font-semibold mb-2 group-hover:text-white">
-                                {service.title}
-                            </h3>
+                {/* FIRST ROW (3 cards) */}
+<div className="grid md:grid-cols-3 gap-6">
+  {services.slice(0, 3).map((service, i) => (
+    <motion.div
+      key={i}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+      className="w-full group rounded-2xl p-5 transition-all duration-500 hover:bg-gradient-to-br hover:from-green-900 hover:to-green-700 hover:text-white hover:shadow-2xl hover:-translate-y-2 cursor-pointer border-2 border-gray-200 hover:border-green-700"
+      onClick={() => setSelected(service)}
+    >
+      <h3 className="text-lg font-semibold mb-2 group-hover:text-white">
+        {service.title}
+      </h3>
 
-                            <p className="text-gray-600 text-sm mb-4 group-hover:text-gray-200">
-                                {service.desc}
-                            </p>
+      <p className="text-gray-600 text-sm mb-4 group-hover:text-gray-200">
+        {service.desc}
+      </p>
 
-                            <div className="relative rounded-xl overflow-hidden">
-                                <img
-                                    src={service.img}
-                                    loading="lazy"
-                                    className="w-full h-[140px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-110"
-                                />
+      <div className="relative rounded-xl overflow-hidden">
+        <img
+          src={service.img}
+          loading="lazy"
+          className="w-full h-[140px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-110"
+        />
 
-                                {/* Arrow Icon */}
-                                <div
-                                    onClick={(e) => {
-                                        e.stopPropagation()
-                                        setSelected(service)
-                                    }}
-                                    className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-green-400 flex items-center justify-center text-white text-lg shadow-lg hover:scale-110 group-hover:bg-white group-hover:text-green-700 transition duration-300 cursor-pointer"
-                                >
-                                    →
-                                </div>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-            </div>
+        <div
+          onClick={(e) => {
+            e.stopPropagation()
+            setSelected(service)
+          }}
+          className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-green-400 flex items-center justify-center text-white text-lg shadow-lg hover:scale-110 group-hover:bg-white group-hover:text-green-700 transition duration-300 cursor-pointer"
+        >
+          →
+        </div>
+      </div>
+    </motion.div>
+  ))}
+</div>
+<div className="flex justify-center gap-6 mt-6">
+  {services.slice(3, 5).map((service, i) => (
+    <div className="w-full md:w-1/3">
+        <motion.div
+      key={i}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.3 }}
+      className="w-full group rounded-2xl p-5 transition-all duration-500 hover:bg-gradient-to-br hover:from-green-900 hover:to-green-700 hover:text-white hover:shadow-2xl hover:-translate-y-2 cursor-pointer border-2 border-gray-200 hover:border-green-700"
+      onClick={() => setSelected(service)}
+    >
+      <h3 className="text-lg font-semibold mb-2 group-hover:text-white">
+        {service.title}
+      </h3>
+
+      <p className="text-gray-600 text-sm mb-4 group-hover:text-gray-200">
+        {service.desc}
+      </p>
+
+      <div className="relative rounded-xl overflow-hidden">
+        <img
+          src={service.img}
+          loading="lazy"
+          className="w-full h-[140px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-110"
+        />
+
+        <div
+          onClick={(e) => {
+            e.stopPropagation()
+            setSelected(service)
+          }}
+          className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-green-400 flex items-center justify-center text-white text-lg shadow-lg hover:scale-110 group-hover:bg-white group-hover:text-green-700 transition duration-300 cursor-pointer"
+        >
+          →
+        </div>
+      </div>
+    </motion.div>
+    </div>
+  ))}
+</div>
+</div>
 
             {/* MODAL */}
             {selected && (
                 <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4 overflow-y-auto">
 
-                    {/* ❌ Close Button (fixed to screen) */}
+
                     <button
                         onClick={() => setSelected(null)}
-                        className="fixed top-4 right-4 z-[999] bg-white text-gray-800 rounded-full w-10 h-10 flex items-center justify-center shadow-lg"
+                        className="fixed top-4 right-4 z-[999] bg-white text-gray-800 rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-gray-100"
                     >
                         ✕
                     </button>
 
-                    <div className="bg-white rounded-2xl max-w-4xl w-full overflow-hidden my-8">
+                    <div className="bg-white rounded-2xl max-w-4xl w-full overflow-y-auto max-h-[90vh] my-8">
 
-                        <div className="grid md:grid-cols-2">
+                        {/* IMAGE ON TOP */}
+                        <img
+                            src={selected.img}
+                            className="w-full h-[250px] md:h-[300px] object-cover"
+                        />
 
-                            {/* IMAGE */}
-                            <img
-                                src={selected.img}
-                                className="w-full h-60 md:h-full object-cover"
-                            />
+                        {/* CONTENT BELOW */}
+                        <div className="p-6 md:p-8 bg-gradient-to-br from-green-900 to-green-700 text-white">
 
-                            {/* CONTENT */}
-                            <div className="p-6 md:p-8 bg-gradient-to-br from-green-900 to-green-700 text-white flex flex-col justify-between">
+                            <h2 className="text-xl md:text-2xl font-bold mb-3">
+                                {selected.title}
+                            </h2>
 
-                                <div>
-                                    <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                                        {selected.title}
-                                    </h2>
+                            <p className="text-gray-200 mb-4 leading-relaxed text-sm md:text-base">
+                                {selected.desc}
+                            </p>
 
-                                    <p className="text-gray-100 mb-6">
-                                        {selected.desc}
-                                    </p>
-
-                                    <h3 className="text-lg font-semibold mb-4 text-green-200">
-                                        Key Features:
-                                    </h3>
-
-                                    <ul className="space-y-3">
-                                        {selected.points?.map((point, i) => (
-                                            <li key={i} className="flex gap-3 items-start">
-                                                <span className="text-green-300 font-bold text-lg">✓</span>
-                                                <span>{point}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-
+                            <div className="mb-6 p-3 md:p-4 bg-green-800/50 rounded-lg">
+                                <p className="text-gray-100 text-xs md:text-sm leading-relaxed">
+                                    Our comprehensive approach ensures that your business receives tailored solutions designed for sustainable growth and long-term success. We combine industry expertise with strategic insights to deliver measurable results.
+                                </p>
                             </div>
+
+                            <h3 className="text-base md:text-lg font-semibold mb-3 text-green-200">
+                                Key Features & Benefits:
+                            </h3>
+
+                            <ul className="space-y-2 mb-6">
+                                {selected.points?.map((point, i) => (
+                                    <li key={i} className="flex gap-2 items-start text-sm md:text-base">
+                                        <span className="text-green-300 font-bold flex-shrink-0">✓</span>
+                                        <span className="text-gray-100">{point}</span>
+                                    </li>
+                                ))}
+                            </ul>
+
+
+
                         </div>
                     </div>
                 </div>
@@ -750,7 +796,7 @@ function CTABlock() {
 }
 
 // Main Home Component
-export  function Home() {
+export function Home() {
     useEffect(() => {
         // Scroll to top when component mounts
         window.scrollTo(0, 0);
