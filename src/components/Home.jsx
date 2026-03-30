@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { FaCheckCircle, FaChartLine, FaShieldAlt, FaLightbulb, FaAward } from 'react-icons/fa'
 import { motion } from 'framer-motion'
@@ -15,7 +15,7 @@ function Hero() {
                 className="absolute inset-0"
                 initial={{ scale: 1.1, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 1.2, ease: "easeOut" }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true }}
             >
                 <img
@@ -134,7 +134,7 @@ function Credibility() {
                             className="flex gap-4"
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: i * 0.15, ease: "easeOut" }}
+                            transition={{ duration: 0.4, delay: i * 0.05, ease: "easeOut" }}
                             viewport={{ once: true }}
                         >
                             <div className="text-green-600 text-3xl flex-shrink-0 mt-1">
@@ -195,7 +195,7 @@ function WhatWeDo() {
                             key={index}
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
+                            transition={{ duration: 0.4, delay: index * 0.1, ease: "easeOut" }}
                             viewport={{ once: true }}
                             className="relative group w-full h-full"
                         >
@@ -334,7 +334,7 @@ function ServiceSnapshot() {
                     className="mb-12 text-center"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.4 }}
                     viewport={{ once: true }}
                 >
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -352,7 +352,7 @@ function ServiceSnapshot() {
                             key={i}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: i * 0.1 }}
+                            transition={{ duration: 0.4, delay: i * 0.05 }}
                             viewport={{ once: true }}
                             className="group bg-gray-100 rounded-2xl p-5 transition-all duration-500 hover:bg-gradient-to-br hover:from-green-900 hover:to-green-700 hover:text-white hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
                             onClick={() => setSelected(service)}
@@ -459,7 +459,7 @@ function ValueProposition() {
                 className="absolute inset-0 z-0 w-full h-full"
                 initial={{ scale: 1.1, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 1.2, ease: "easeOut" }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true }}
             >
                 <img
@@ -575,7 +575,7 @@ function HowItWorks() {
                                     key={i}
                                     initial={{ opacity: 0, y: 30 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.6, delay: i * 0.12, ease: "easeOut" }}
+                                    transition={{ duration: 0.4, delay: i * 0.06, ease: "easeOut" }}
                                     viewport={{ once: true }}
                                     className="flex flex-col items-center text-center"
                                 >
@@ -670,7 +670,7 @@ function Metrics() {
                             className="text-center flex flex-col items-center"
                             initial={{ opacity: 0, scale: 0.9 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.7, delay: i * 0.15 }}
+                            transition={{ duration: 0.5, delay: i * 0.08 }}
                             viewport={{ once: true }}
                         >
 
@@ -752,6 +752,11 @@ function CTABlock() {
 
 // Main Home Component
 export default function Home() {
+    useEffect(() => {
+        // Scroll to top when component mounts
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className="overflow-hidden">
             <Hero />
