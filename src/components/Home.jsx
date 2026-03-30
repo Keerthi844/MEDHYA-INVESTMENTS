@@ -3,7 +3,6 @@ import { useNavigate, Link } from 'react-router-dom'
 import { FaCheckCircle, FaChartLine, FaShieldAlt, FaLightbulb, FaAward } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 
-
 // Hero Section
 function Hero() {
     const navigate = useNavigate()
@@ -13,10 +12,10 @@ function Hero() {
             {/* BACKGROUND IMAGE */}
             <motion.div
                 className="absolute inset-0"
-                initial={{ scale: 1.1, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
+
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true }}
+                initial={{ scale: 1.05, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
             >
                 <img
                     src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44"
@@ -332,10 +331,10 @@ function ServiceSnapshot() {
                 {/* Heading */}
                 <motion.div
                     className="mb-12 text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+
                     transition={{ duration: 0.4 }}
-                    viewport={{ once: true }}
+                    initial={{ scale: 1.05, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
                 >
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                         Services snapshot
@@ -348,15 +347,14 @@ function ServiceSnapshot() {
                 {/* CARDS GRID */}
                 <div className="grid md:grid-cols-3 gap-6">
                     {services.map((service, i) => (
-                        <motion.div
-                            key={i}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.4, delay: i * 0.05 }}
-                            viewport={{ once: true }}
-                            className="group bg-gray-100 rounded-2xl p-5 transition-all duration-500 hover:bg-gradient-to-br hover:from-green-900 hover:to-green-700 hover:text-white hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
-                            onClick={() => setSelected(service)}
-                        >
+                       <motion.div
+                              key={i}
+                              initial={{ opacity: 0, y: 20 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.3 }}
+                              className="group bg-gray-100 rounded-2xl p-5 transition-all duration-500 hover:bg-gradient-to-br hover:from-green-900 hover:to-green-700 hover:text-white hover:shadow-2xl hover:-translate-y-2 cursor-pointer"
+                                onClick={() => setSelected(service)}
+>
                             <h3 className="text-lg font-semibold mb-2 group-hover:text-white">
                                 {service.title}
                             </h3>
@@ -368,6 +366,7 @@ function ServiceSnapshot() {
                             <div className="relative rounded-xl overflow-hidden">
                                 <img
                                     src={service.img}
+                                    loading="lazy"
                                     className="w-full h-[140px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-110"
                                 />
 
@@ -446,7 +445,7 @@ function ServiceSnapshot() {
 
 // Value Proposition
 function ValueProposition() {
-     const navigate = useNavigate(); 
+    const navigate = useNavigate();
     const features = [
 
     ]
@@ -570,32 +569,32 @@ function HowItWorks() {
                     <div className="hidden md:block absolute top-8 left-[10%] right-[10%] h-1 bg-green-500 z-0"></div>
 
                     <div className="grid md:grid-cols-5 gap-4 relative z-10">
-                            {steps.map((step, i) => (
-                                <motion.div
-                                    key={i}
-                                    initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.4, delay: i * 0.06, ease: "easeOut" }}
-                                    viewport={{ once: true }}
-                                    className="flex flex-col items-center text-center"
-                                >
-                                    {/* Circle */}
-                                    <div className="bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">
-                                        {step.num}
-                                    </div>
+                        {steps.map((step, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.4, delay: i * 0.06, ease: "easeOut" }}
+                                viewport={{ once: true }}
+                                className="flex flex-col items-center text-center"
+                            >
+                                {/* Circle */}
+                                <div className="bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">
+                                    {step.num}
+                                </div>
 
-                                    {/* Title */}
-                                    <h3 className="font-bold text-gray-900 mb-2">
-                                        {step.title}
-                                    </h3>
+                                {/* Title */}
+                                <h3 className="font-bold text-gray-900 mb-2">
+                                    {step.title}
+                                </h3>
 
-                                    {/* Description */}
-                                    <p className="text-gray-600 text-sm">
-                                        {step.desc}
-                                    </p>
-                                </motion.div>
-                            ))}
-                        </div>
+                                {/* Description */}
+                                <p className="text-gray-600 text-sm">
+                                    {step.desc}
+                                </p>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
@@ -751,7 +750,7 @@ function CTABlock() {
 }
 
 // Main Home Component
-export default function Home() {
+export  function Home() {
     useEffect(() => {
         // Scroll to top when component mounts
         window.scrollTo(0, 0);
