@@ -26,7 +26,7 @@ export default function Footer() {
                <img
     src={medhyaLogo}
     alt="Medhya Investments"
-    className="h-12 w-12 rounded-full object-cover"
+    className="h-16 w-16 rounded-full object-cover"
   />
               <div>
                 <h1 className="text-lg font-bold leading-tight">MEDHYA</h1>
