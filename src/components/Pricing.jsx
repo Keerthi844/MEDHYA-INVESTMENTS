@@ -65,7 +65,7 @@ export default function WhyChooseUs() {
                     .card-container {
                         position: relative;
                         max-width: 350px;
-                        background: linear-gradient(to bottom, #f0f0f0, #ffffff);
+                        background: linear-gradient(to bottom, #e1e9e1, #ffffff);
                         border-radius: 10px;
                         padding: 2em 1.2em;
                         margin: 12px;

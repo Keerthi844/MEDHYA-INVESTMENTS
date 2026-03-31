@@ -169,10 +169,10 @@ function WhatWeDo() {
         "Portfolio Optimization",
     ]
     const extendedItems = [
-        "Deal Sourcing & Structuring",
-        "Due Diligence",
-        "Valuation & Exit Strategy",
-        "Portfolio Optimization",
+        "End-to-End Business Support",
+        "Compliance & Regulatory Services",
+        "Operational & Process Optimization",
+        "Technology & Digital Transformation",
     ]
 
     return (
@@ -270,11 +270,7 @@ function ServiceSnapshot() {
             desc: "From ideation to fundraising, we guide your journey.",
             img: "https://images.unsplash.com/photo-1552664730-d307ca884978",
             points: [
-                "Pre-startup advisory & ideation support",
-                "MVP development & pitch preparation",
-                "Incubation support & growth mentorship",
-                "Market research & competitor analysis",
-                "Product scalability assessment",
+                "Incubation & Idea Validation is the process of transforming early-stage ideas into viable and scalable business opportunities. We assess the feasibility of your concept, identify real market needs, and validate your idea through in-depth research and customer insights. By developing and testing a Minimum Viable Product (MVP), we gather feedback to refine your solution and ensure strong problem-solution fit. Our approach focuses on building a sustainable business model, reducing risks, and making data-driven decisions. With continuous mentorship and strategic guidance, we help you move confidently from idea to execution, preparing your startup for growth, funding, and long-term success."
             ]
         },
         {
@@ -282,11 +278,7 @@ function ServiceSnapshot() {
             desc: "Accurate business valuation for investments & exits.",
             img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf",
             points: [
-                "Business & startup valuation",
-                "Financial model build & review",
-                "M&A & acquisition valuation",
-                "ESOP & sweat equity valuations",
-                "Regulatory compliance valuations",
+                "Valuation & Financial Modeling helps businesses understand their true worth and plan for sustainable growth. We analyze financial data to determine accurate business valuation using industry-standard methods. Our team builds detailed financial models that project revenue, costs, and profitability. We assess key drivers such as market conditions, growth potential, and risk factors. Scenario analysis is conducted to evaluate best-case and worst-case outcomes. These models support informed decision-making and strategic planning. We also assist in preparing financial forecasts for investors and stakeholders. Clear insights into cash flow and funding requirements are provided. Our approach ensures transparency, accuracy, and investor confidence. Ultimately, we help position your business for successful fundraising and long-term financial stability.",
             ]
         },
         {
@@ -294,11 +286,7 @@ function ServiceSnapshot() {
             desc: "Expert support for M&A and fundraising deals.",
             img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa",
             points: [
-                "Revenue & financial modeling",
-                "Fundraising & investment advisory",
-                "Due diligence support",
-                "Agreement structuring & review",
-                "Exit strategy planning & negotiation",
+                "Transaction Advisory supports businesses through critical financial transactions with strategic insight and expert guidance. We assist in mergers, acquisitions, and investment deals to ensure smooth execution. Our team conducts thorough due diligence to identify risks and opportunities. We provide valuation analysis to determine fair deal pricing. Financial and operational data are reviewed to support informed decision-making. We help structure transactions to maximize value and minimize risks. Negotiation support is offered to achieve favorable outcomes. Our advisory ensures compliance with legal and regulatory requirements. We streamline the transaction process to save time and resources. Ultimately, we enable confident, well-informed decisions for successful deal completion.",
             ]
         },
         {
@@ -306,11 +294,7 @@ function ServiceSnapshot() {
             desc: "Strategic guidance for scalable growth.",
             img: "https://images.unsplash.com/photo-1556761175-4b46a572b786",
             points: [
-                "Interim CFO services",
-                "Financial strategy & cash flow management",
-                "Board advisory & performance reporting",
-                "Investor relations & network access",
-                "Monthly strategic reviews",
+                "Virtual CFO Services provide strategic financial leadership without the need for a full-time CFO. We manage financial planning, budgeting, and forecasting to support business growth. Our team analyzes financial performance and offers actionable insights. We help optimize cash flow and control costs effectively. Accurate financial reporting ensures transparency and informed decision-making. We assist in setting financial goals and tracking key performance indicators. Risk management strategies are implemented to safeguard business stability. We support fundraising, investor relations, and financial structuring. Compliance with financial regulations and standards is maintained. Ultimately, we act as your trusted financial partner, driving profitability and long-term success.",
             ]
         },
         {
@@ -318,17 +302,13 @@ function ServiceSnapshot() {
             desc: "Complete compliance and financial support.",
             img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
             points: [
-                "Risk assessment & mitigation planning",
-                "IT governance & security advisory",
-                "Compliance & regulatory support",
-                "Business continuity planning",
-                "Cybersecurity advisory",
+                "Risk & IT Advisory helps businesses identify, assess, and manage risks while strengthening their technology framework. We evaluate operational, financial, and compliance risks to ensure business stability. Our team designs risk mitigation strategies to minimize potential threats. We assess IT systems, infrastructure, and security to enhance performance and reliability. Cybersecurity measures are implemented to protect sensitive data and prevent breaches. We ensure compliance with industry standards and regulatory requirements. Our advisory includes IT governance and process optimization for efficiency. We help in implementing robust internal controls and monitoring systems. Technology risks are analyzed to support safe digital transformation. Ultimately, we enable organizations to operate securely, efficiently, and with confidence.",
             ]
         },
     ]
 
     return (
-        <section className="py-16 bg-white">
+        <section className="py-8 bg-white">
             <div className="max-w-6xl mx-auto px-4">
 
                 {/* Heading */}
@@ -347,87 +327,87 @@ function ServiceSnapshot() {
                     </p>
                 </motion.div>
 
-                {/* CARDS GRID */}
+              
                 {/* FIRST ROW (3 cards) */}
-<div className="grid md:grid-cols-3 gap-6">
-  {services.slice(0, 3).map((service, i) => (
-    <motion.div
-      key={i}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-      className="w-full group rounded-2xl p-5 transition-all duration-500 hover:bg-gradient-to-br hover:from-green-900 hover:to-green-700 hover:text-white hover:shadow-2xl hover:-translate-y-2 cursor-pointer border-2 border-gray-200 hover:border-green-700"
-      onClick={() => setSelected(service)}
-    >
-      <h3 className="text-lg font-semibold mb-2 group-hover:text-white">
-        {service.title}
-      </h3>
+                <div className="grid md:grid-cols-3 gap-6">
+                    {services.slice(0, 3).map((service, i) => (
+                        <motion.div
+                            key={i}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="w-full group rounded-2xl p-5 transition-all duration-500 hover:bg-gradient-to-br hover:from-green-900 hover:to-green-700 hover:text-white hover:shadow-2xl hover:-translate-y-2 cursor-pointer border-2 border-gray-200 hover:border-green-700"
+                            onClick={() => setSelected(service)}
+                        >
+                            <h3 className="text-lg font-semibold mb-2 group-hover:text-white">
+                                {service.title}
+                            </h3>
 
-      <p className="text-gray-600 text-sm mb-4 group-hover:text-gray-200">
-        {service.desc}
-      </p>
+                            <p className="text-gray-600 text-sm mb-4 group-hover:text-gray-200">
+                                {service.desc}
+                            </p>
 
-      <div className="relative rounded-xl overflow-hidden">
-        <img
-          src={service.img}
-          loading="lazy"
-          className="w-full h-[140px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-110"
-        />
+                            <div className="relative rounded-xl overflow-hidden">
+                                <img
+                                    src={service.img}
+                                    loading="lazy"
+                                    className="w-full h-[140px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-110"
+                                />
 
-        <div
-          onClick={(e) => {
-            e.stopPropagation()
-            setSelected(service)
-          }}
-          className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-green-400 flex items-center justify-center text-white text-lg shadow-lg hover:scale-110 group-hover:bg-white group-hover:text-green-700 transition duration-300 cursor-pointer"
-        >
-          →
-        </div>
-      </div>
-    </motion.div>
-  ))}
-</div>
-<div className="flex justify-center gap-6 mt-6">
-  {services.slice(3, 5).map((service, i) => (
-    <div className="w-full md:w-1/3">
-        <motion.div
-      key={i}
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
-      className="w-full group rounded-2xl p-5 transition-all duration-500 hover:bg-gradient-to-br hover:from-green-900 hover:to-green-700 hover:text-white hover:shadow-2xl hover:-translate-y-2 cursor-pointer border-2 border-gray-200 hover:border-green-700"
-      onClick={() => setSelected(service)}
-    >
-      <h3 className="text-lg font-semibold mb-2 group-hover:text-white">
-        {service.title}
-      </h3>
+                                <div
+                                    onClick={(e) => {
+                                        e.stopPropagation()
+                                        setSelected(service)
+                                    }}
+                                    className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-green-400 flex items-center justify-center text-white text-lg shadow-lg hover:scale-110 group-hover:bg-white group-hover:text-green-700 transition duration-300 cursor-pointer"
+                                >
+                                    →
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
 
-      <p className="text-gray-600 text-sm mb-4 group-hover:text-gray-200">
-        {service.desc}
-      </p>
+                {/* SECOND ROW (2 cards) */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 max-w-2xl mx-auto">
+                    {services.slice(3, 5).map((service, i) => (
+                        <motion.div
+                            key={i}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="w-full group rounded-2xl p-5 transition-all duration-500 hover:bg-gradient-to-br hover:from-green-900 hover:to-green-700 hover:text-white hover:shadow-2xl hover:-translate-y-2 cursor-pointer border-2 border-gray-200 hover:border-green-700"
+                            onClick={() => setSelected(service)}
+                        >
+                            <h3 className="text-lg font-semibold mb-2 group-hover:text-white">
+                                {service.title}
+                            </h3>
 
-      <div className="relative rounded-xl overflow-hidden">
-        <img
-          src={service.img}
-          loading="lazy"
-          className="w-full h-[140px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-110"
-        />
+                            <p className="text-gray-600 text-sm mb-4 group-hover:text-gray-200">
+                                {service.desc}
+                            </p>
 
-        <div
-          onClick={(e) => {
-            e.stopPropagation()
-            setSelected(service)
-          }}
-          className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-green-400 flex items-center justify-center text-white text-lg shadow-lg hover:scale-110 group-hover:bg-white group-hover:text-green-700 transition duration-300 cursor-pointer"
-        >
-          →
-        </div>
-      </div>
-    </motion.div>
-    </div>
-  ))}
-</div>
-</div>
+                            <div className="relative rounded-xl overflow-hidden">
+                                <img
+                                    src={service.img}
+                                    loading="lazy"
+                                    className="w-full h-[140px] object-cover rounded-xl transition-transform duration-300 group-hover:scale-110"
+                                />
+
+                                <div
+                                    onClick={(e) => {
+                                        e.stopPropagation()
+                                        setSelected(service)
+                                    }}
+                                    className="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-green-400 flex items-center justify-center text-white text-lg shadow-lg hover:scale-110 group-hover:bg-white group-hover:text-green-700 transition duration-300 cursor-pointer"
+                                >
+                                    →
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+            </div>
 
             {/* MODAL */}
             {selected && (
@@ -460,15 +440,6 @@ function ServiceSnapshot() {
                                 {selected.desc}
                             </p>
 
-                            <div className="mb-6 p-3 md:p-4 bg-green-800/50 rounded-lg">
-                                <p className="text-gray-100 text-xs md:text-sm leading-relaxed">
-                                    Our comprehensive approach ensures that your business receives tailored solutions designed for sustainable growth and long-term success. We combine industry expertise with strategic insights to deliver measurable results.
-                                </p>
-                            </div>
-
-                            <h3 className="text-base md:text-lg font-semibold mb-3 text-green-200">
-                                Key Features & Benefits:
-                            </h3>
 
                             <ul className="space-y-2 mb-6">
                                 {selected.points?.map((point, i) => (

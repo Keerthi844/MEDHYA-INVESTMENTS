@@ -89,11 +89,7 @@ export default function Services() {
                 desc: "Helping startups validate ideas and build strong foundations.",
                 img: "https://cdn.prod.website-files.com/63d90fe29e8bf43980780590/65e19ac840e75505ca576f60_Teal.jpg",
                 points: [
-                  "Pre-startup advisory (Ideation & Conceptualization)",
-                  "MVP, pitch, and incubation support",
-                  "Growth mentorship & expansion strategy",
-                  "Market research and competitor analysis",
-                  "Product scalability & milestone evaluation",
+                 "Incubation & Idea Validation focuses on transforming early-stage ideas into practical and scalable business ventures. We begin by evaluating the feasibility and uniqueness of your concept to ensure it addresses a real problem. Our team conducts in-depth market research to identify demand, target audience, and competitive landscape. Through structured validation techniques, we test assumptions and refine your value proposition. We support the development of a Minimum Viable Product (MVP) to bring your idea to life quickly and efficiently. User feedback is collected and analyzed to improve functionality and usability. We help in shaping a strong problem-solution fit that aligns with market needs. Our experts guide you in building a sustainable and scalable business model. Risk factors are identified early and mitigated through data-driven insights.",
 
                 ],
               },
@@ -102,11 +98,7 @@ export default function Services() {
                 desc: "Accurate valuation services for startups and businesses.",
                 img: "https://images.presentationgo.com/2025/06/financial-analyst-reviewing-data.jpg",
                 points: [
-                  "Business & startup valuation",
-                  "Financial model build and review",
-                  "M&A and acquisition valuation",
-                  "ESOP & sweat equity valuations",
-                  "Regulatory and stock exchange valuations"
+                  "Valuation is the process of determining the true economic worth of a business or startup. We provide accurate and reliable valuation services using industry-standard methodologies. Our approach considers financial performance, market conditions, and growth potential. We analyze key factors such as revenue, profitability, and future projections. Both qualitative and quantitative aspects are evaluated for a comprehensive assessment. We support startups and established businesses across various stages of growth. Our valuation models are tailored to suit specific business needs and industries. We also assist in valuations for mergers, acquisitions, and fundraising activities. Regulatory and compliance requirements are carefully addressed during the process. Transparent reporting ensures clarity and builds investor confidence. We help businesses understand their value and make informed strategic decisions."
                 ],
               },
               {
@@ -114,11 +106,7 @@ export default function Services() {
                 desc: "Support for fundraising and deal execution.",
                 img: "https://png.pngtree.com/background/20250126/original/pngtree-a-professional-businessman-seals-the-deal-signing-investment-contract-in-a-picture-image_14177048.jpg",
                 points: [
-                  "Revenue and financial modeling",
-                  "Fundraising & investment advisory",
-                  "Due diligence support",
-                  "Agreement structuring & review",
-                  "Exit strategy planning (M&A/Founders)"
+                  "Transaction Advisory provides strategic support to businesses during critical financial transactions such as mergers, acquisitions, and fundraising. We guide organizations through every stage of the deal lifecycle, ensuring smooth and efficient execution. Our team conducts detailed due diligence to identify potential risks and uncover opportunities. We analyze financial, operational, and market data to support informed decision-making. Valuation insights are provided to ensure fair and competitive deal pricing. We assist in structuring transactions to maximize value and minimize risks. Our experts offer negotiation support to help achieve favorable terms and outcomes. We ensure compliance with legal and regulatory requirements throughout the process. Clear documentation and reporting enhance transparency for all stakeholders. We also support exit strategy planning for founders and investors."
                 ],
               },
               {
@@ -126,11 +114,7 @@ export default function Services() {
                 desc: "Strategic support for scalable growth.",
                 img: "https://www.ey.com/content/dam/ey-unified-site/ey-com/en-us/insights/private-business/images/ey-business-group-meeting-discussion.jpg",
                 points: [
-                  "Business development strategy",
-                  "Corporate structuring & restructuring",
-                  "Board advisory & performance reporting",
-                  "Investor and network access (Angels/VC/PE)",
-                  "Strategic valuation support"
+                  "Management Consulting focuses on helping businesses improve performance, solve complex challenges, and achieve sustainable growth. We work closely with organizations to understand their goals, operations, and market position. Our approach involves analyzing current processes to identify gaps and opportunities for improvement. We provide strategic guidance on business planning, expansion, and competitive positioning. Organizational structure and governance frameworks are optimized for better efficiency and control. We support decision-making through data-driven insights and performance analysis. Our team assists in developing scalable strategies aligned with long-term objectives. We help streamline operations, reduce costs, and enhance productivity. Change management support ensures smooth implementation of new initiatives. We also offer advisory on corporate restructuring and transformation."
                 ],
               },
               {
@@ -138,11 +122,7 @@ export default function Services() {
                 desc: "Complete compliance and financial support.",
                 img: "https://virtualnexgen.com/assets/uploads/aboutus/39995.jpg",
                 points: [
-                  "Company incorporation & statutory compliance",
-                  "Accounting and financial reporting",
-                  "Direct and indirect taxation",
-                  "Legal support (pre & post startup)",
-                  "Banking and operational support"
+                  "Outsourcing Services enable businesses to streamline operations by delegating key functions to experienced professionals. We provide end-to-end support across accounting, compliance, and administrative activities. Our services help reduce operational costs while maintaining high-quality standards. We manage financial reporting, bookkeeping, and tax-related requirements efficiently. Compliance with statutory and regulatory obligations is ensured through timely filings and documentation. Our team supports company incorporation and ongoing legal processes. We help businesses focus on core activities by handling routine and complex back-office tasks. Technology-driven solutions improve accuracy, speed, and transparency. Customized outsourcing models are designed based on business needs and scale."
                 ],
               },
               {
@@ -150,10 +130,7 @@ export default function Services() {
                 desc: "Expert financial leadership for businesses.",
                 img: "https://static.wixstatic.com/media/db8f69_da17c7e92fd94cc2998504f8445a53cb~mv2.png/v1/fill/w_1000%2Ch_558%2Cal_c%2Cq_90%2Cusm_0.66_1.00_0.01/db8f69_da17c7e92fd94cc2998504f8445a53cb~mv2.png",
                 points: [
-                  "Interim CFO services",
-                  "Financial strategy & cash flow management",
-                  "Accounting policies & MIS reporting",
-                  "Monthly performance reviews"
+                  "Company Management / Virtual CFO services provide businesses with strategic financial leadership without the need for a full-time CFO. We support organizations in managing their financial operations with expertise and precision. Our services include financial planning, budgeting, and forecasting to ensure sustainable growth. We analyze financial performance and provide actionable insights for better decision-making. Cash flow management is optimized to maintain liquidity and operational stability. We establish strong financial controls and reporting systems for transparency. Our team assists in setting financial goals and tracking key performance indicators. We support fundraising activities and maintain investor relations effectively. Compliance with financial regulations and standards is ensured at all times. We also help in cost optimization and improving overall profitability"
                 ],
               },
             ].map((item, i) => (
@@ -191,7 +168,6 @@ export default function Services() {
       )}
 
       {/* ================= INVESTOR ================= */}
-      {/* ================= INVESTOR ================= */}
       {displayTab === "investor" && (
         <section ref={investorRef} className="max-w-6xl mx-auto px-4 pb-12 sm:pb-16 scroll-mt-20">
 
@@ -207,12 +183,7 @@ export default function Services() {
                 desc: "Comprehensive valuation services for businesses and investments.",
                 img: "https://images.unsplash.com/photo-1554224155-6726b3ff858f",
                 points: [
-                  "Business Valuation",
-                  "Intangible / Brand Valuations",
-                  "M&A / Share Swap Valuations",
-                  "Valuation for Acquisitions (Buy Side and Sell Side)",
-                  "ESOP and Sweat Equity Valuation",
-                  "FDI / ODI Valuations"
+                  "Valuation is the process of determining the true financial worth of a business or startup. We provide accurate and reliable valuation services using globally accepted methodologies. Our approach considers financial performance, market trends, and future growth potential. We analyze key factors such as revenue, profitability, assets, and risk profile. Both qualitative and quantitative aspects are evaluated for a well-rounded assessment. We support startups, growing companies, and established businesses across different stages. Our valuation models are customized to suit industry and business-specific requirements. We assist in valuations for fundraising, mergers, acquisitions, and strategic decisions. Compliance with regulatory and legal standards is ensured throughout the process. Transparent reporting helps build trust with investors and stakeholders. We provide clear insights to support informed decision-making."
                 ],
               },
               {
@@ -220,13 +191,7 @@ export default function Services() {
                 desc: "Thorough analysis to assess risks and opportunities.",
                 img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
                 points: [
-                  "Corporate Due Diligence",
-                  "Financial Due Diligence",
-                  "Tax Due Diligence",
-                  "Asset Purchase Due Diligence",
-                  "Commercial Due Diligence",
-                  "Investment Due Diligence",
-                  "Business Due Diligence"
+                  "Due Diligence is a critical process of evaluating a business before making investment or transaction decisions. We conduct comprehensive assessments of financial, legal, and operational aspects to uncover potential risks and opportunities. Our team reviews financial statements, contracts, and compliance records in detail. We analyze business performance, revenue streams, and cost structures for accuracy and sustainability. Legal due diligence ensures that all regulatory requirements and obligations are met. Operational reviews help identify inefficiencies and areas for improvement. We also assess market position, competitive landscape, and growth potential. Our process ensures transparency and reliability in all findings. We provide clear and structured reports for informed decision-making. Risk factors are highlighted along with actionable recommendations. Our due diligence support helps investors and stakeholders make confident decisions"
                 ],
               },
               {
@@ -234,16 +199,7 @@ export default function Services() {
                 desc: "End-to-end support for mergers, acquisitions, and deals.",
                 img: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
                 points: [
-                  "Identifying key targets locally and internationally",
-                  "Valuation",
-                  "Transaction structuring and negotiation",
-                  "Advice on financing (debt, equity, or complex instruments)",
-                  "Supervising due diligence, legal, and execution processes",
-                  "Developed detailed plans for executing strategy through people, including assessment of employee leadership capabilities and identification of competencies",
-                  "Staffing models, organizational structure, and detailed role profiling",
-                  "Workforce planning and needs analysis",
-                  "Change management",
-                  "Culture visioning and transformation"
+                  "M&A Support (Mergers & Acquisitions) helps businesses navigate complex transactions with confidence and strategic clarity. We assist organizations throughout the entire M&A lifecycle, from initial planning to final execution. Our team conducts thorough financial and operational analysis to identify opportunities and risks. We provide valuation insights to determine fair deal structures and pricing. Due diligence is carried out to ensure transparency and informed decision-making. We support in structuring deals to maximize value and minimize potential risks. Our experts guide negotiation processes to achieve favorable outcomes for all parties. We ensure compliance with legal, regulatory, and financial requirements. Integration planning is provided to ensure a smooth transition post-transaction. We help align business objectives and operational strategies during mergers or acquisitions"
                 ],
               },
             ].map((item, i) => (
@@ -304,7 +260,7 @@ export default function Services() {
                 icon: "💼",
                 desc: "Complete financial leadership and strategic guidance",
                 items: [
-                  "We provide strategic financial guidance to support business growth and stabilityFocus is placed on profitability, sustainability, and risk mitigation.Tailored solutions are designed based on your business goals Our advisors help in decision-making, capital structuring, and investment planning.We analyze financial health and identify improvement opportunities"
+                  "We provide strategic financial guidance to support business growth and stabilityFocus is placed on profitability, sustainability, and risk mitigation.Tailored solutions are designed based on your business goals Our advisors help in decision-making, capital structuring, and investment planning.We analyze financial health and identify improvement opportunities.Financial Advisory provides strategic guidance to help businesses manage their finances effectively and achieve sustainable growth. We analyze financial performance, identify opportunities, and offer data-driven insights for better decision-making. Our services include planning, budgeting, and optimizing cash flow to improve overall efficiency."
                 ]
               },
               {
@@ -313,7 +269,7 @@ export default function Services() {
                 icon: "📈",
                 desc: "Accurate financial forecasting and modeling",
                 items: [
-                  "We prepare detailed financial forecasts based on historical and market data. These projections include revenue, expenses, and profitability over time, helping businesses plan investments and funding requirements effectively. They are highly useful for pitching to investors and stakeholders, ensuring a clear financial roadmap. Our approach ensures realistic and data-driven financial planning for sustainable growth.",
+                  "We prepare detailed financial forecasts based on historical and market data. These projections include revenue, expenses, and profitability over time, helping businesses plan investments and funding requirements effectively. They are highly useful for pitching to investors and stakeholders, ensuring a clear financial roadmap. Our approach ensures realistic and data-driven financial planning for sustainable growth.Financial Projections provide a forward-looking view of a business’s financial performance based on realistic assumptions and data analysis. We prepare detailed forecasts covering revenue, expenses, cash flow, and profitability. Our projections support strategic planning, budgeting, and investor presentations. They help businesses make informed decisions and plan for sustainable growth and financial stability.",
                  
                 ]
               },
@@ -323,7 +279,7 @@ export default function Services() {
                 icon: "💰",
                 desc: "Strategic cash flow management",
                 items: [
-                  "We estimate cash inflows and outflows to maintain optimal liquidity and ensure smooth business operations. Our approach helps avoid cash shortages while identifying seasonal fluctuations and working capital requirements. It supports better planning of payments and expenses, enabling businesses to stay financially organized. Overall, this leads to improved financial stability, control, and long-term sustainability.",
+                  "We estimate cash inflows and outflows to maintain optimal liquidity and ensure smooth business operations. Our approach helps avoid cash shortages while identifying seasonal fluctuations and working capital requirements. It supports better planning of payments and expenses, enabling businesses to stay financially organized. Overall, this leads to improved financial stability, control, and long-term sustainability.Cash Flow Projections help businesses anticipate inflows and outflows to maintain financial stability. We forecast cash movements to ensure sufficient liquidity for operations. Our analysis helps identify potential shortfalls and plan corrective actions. This enables better financial control and uninterrupted business functioning.",
                  
                 ]
               },
@@ -333,7 +289,7 @@ export default function Services() {
                 icon: "📊",
                 desc: "Comprehensive budgeting solutions",
                 items: [
-                  "We create structured budgets aligned with business objectives to ensure effective financial planning and control. Our approach helps allocate resources efficiently across departments while tracking actual performance against planned targets. This enables the identification of cost-saving opportunities and areas for improvement. Overall, it ensures disciplined financial management and supports sustainable business growth.",
+                  "We create structured budgets aligned with business objectives to ensure effective financial planning and control. Our approach helps allocate resources efficiently across departments while tracking actual performance against planned targets. This enables the identification of cost-saving opportunities and areas for improvement. Overall, it ensures disciplined financial management and supports sustainable business growth.Budgeting provides a structured plan for managing income and expenses effectively. We create detailed budgets aligned with business goals and growth strategies. Our approach ensures optimal resource allocation and cost control. It helps track performance and supports informed financial decision-making.",
                   
                 ]
               },
@@ -343,7 +299,7 @@ export default function Services() {
                 icon: "💳",
                 desc: "Effective cost control strategies",
                 items: [
-                  "We analyze cost structures to improve operational efficiency and financial performance. Our process identifies unnecessary expenses and reduces wastage while optimizing both operational and production costs. This helps enhance profitability without compromising quality. We also implement effective cost control strategies that deliver long-term financial benefits and stability.",
+                  "We analyze cost structures to improve operational efficiency and financial performance. Our process identifies unnecessary expenses and reduces wastage while optimizing both operational and production costs. This helps enhance profitability without compromising quality. We also implement effective cost control strategies that deliver long-term financial benefits and stability.Cost Management focuses on controlling expenses while maintaining efficiency and quality. We analyze cost structures to identify savings and optimization opportunities. Our strategies help reduce unnecessary spending and improve profitability. This ensures sustainable operations and better financial performance.",
                   
                 ]
               },
@@ -353,7 +309,7 @@ export default function Services() {
                 icon: "✔️",
                 desc: "Comprehensive audit assistance",
                 items: [
-                  "We assist organizations during both internal and external audits by ensuring proper documentation and compliance readiness. Our team helps resolve audit queries and address discrepancies efficiently, minimizing delays and risks. This process strengthens financial transparency and improves the accuracy of records. Overall, we help businesses maintain full regulatory compliance with confidence.",
+                  "We assist organizations during both internal and external audits by ensuring proper documentation and compliance readiness. Our team helps resolve audit queries and address discrepancies efficiently, minimizing delays and risks. This process strengthens financial transparency and improves the accuracy of records. Overall, we help businesses maintain full regulatory compliance with confidence.Audit Support ensures smooth and efficient audit processes with complete accuracy and transparency. We assist in preparing financial records, documentation, and reconciliations. Our team coordinates with auditors to address queries and ensure compliance. This helps reduce risks and ensures a hassle-free audit experience.",
                   
                 ]
               },
@@ -363,7 +319,7 @@ export default function Services() {
                 icon: "⚖️",
                 desc: "Strategic governance framework",
                 items: [
-                  "We establish strong corporate governance frameworks that promote transparency, accountability, and ethical business practices. Our approach ensures that operations are aligned with regulatory standards and industry expectations. This enhances stakeholder confidence and builds long-term trust. Ultimately, it supports sustainable growth and responsible business management.",
+                  "We establish strong corporate governance frameworks that promote transparency, accountability, and ethical business practices. Our approach ensures that operations are aligned with regulatory standards and industry expectations. This enhances stakeholder confidence and builds long-term trust. Ultimately, it supports sustainable growth and responsible business management.Corporate Governance focuses on establishing strong policies, ethics, and accountability within an organization. We help design frameworks that ensure transparency and effective decision-making. Our approach strengthens stakeholder trust and regulatory compliance. This leads to improved organizational performance and long-term sustainability.",
                   
                 ]
               },
@@ -373,7 +329,7 @@ export default function Services() {
                 icon: "⚠️",
                 desc: "Identify and mitigate business risks",
                 items: [
-                  "We identify financial and operational risks and analyze their potential impact and likelihood. Our approach includes developing effective strategies to mitigate and manage these risks, ensuring business continuity and stability. By promoting proactive risk management practices, we help organizations stay prepared and resilient in a dynamic business environment.",
+                  "We identify financial and operational risks and analyze their potential impact and likelihood. Our approach includes developing effective strategies to mitigate and manage these risks, ensuring business continuity and stability. By promoting proactive risk management practices, we help organizations stay prepared and resilient in a dynamic business environment.Risk Assessment identifies potential threats that could impact business operations and growth. We evaluate financial, operational, and strategic risks systematically. Our insights help in developing effective mitigation strategies. This enables businesses to operate with confidence and stability.",
                   
                 ]
               },
@@ -383,7 +339,7 @@ export default function Services() {
                 icon: "📋",
                 desc: "Regulatory compliance management",
                 items: [
-                  "We ensure adherence to all relevant laws and regulations by managing filings, documentation, and statutory requirements efficiently. Our services help reduce the risk of penalties and legal issues while keeping your business updated with regulatory changes. This ensures smooth, compliant, and hassle-free operations.",
+                  "We ensure adherence to all relevant laws and regulations by managing filings, documentation, and statutory requirements efficiently. Our services help reduce the risk of penalties and legal issues while keeping your business updated with regulatory changes. This ensures smooth, compliant, and hassle-free operations.Compliances of the Various Acts Applicable ensure that businesses adhere to all legal and regulatory requirements. We manage filings, documentation, and statutory obligations accurately and on time. Our services help avoid penalties and legal complications. This ensures smooth and compliant business operations.",
                  
                 ]
               },
@@ -393,7 +349,7 @@ export default function Services() {
                 icon: "🔒",
                 desc: "Robust internal control systems",
                 items: [
-                  "We implement robust systems and controls to prevent errors and fraud while ensuring the accuracy and reliability of financial data. Our approach strengthens operational efficiency and accountability by continuously monitoring processes and compliance. This helps build a strong and secure financial control environment.",
+                  "We implement robust systems and controls to prevent errors and fraud while ensuring the accuracy and reliability of financial data. Our approach strengthens operational efficiency and accountability by continuously monitoring processes and compliance. This helps build a strong and secure financial control environment.Internal Controls are essential for maintaining accuracy, efficiency, and accountability in business processes. We design and implement control systems to prevent errors and fraud. Our approach improves operational efficiency and financial reliability. This strengthens overall governance and business performance.",
                  
                 ]
               },
@@ -403,7 +359,7 @@ export default function Services() {
                 icon: "📄",
                 desc: "Standardized accounting practices",
                 items: [
-                  "We define standardized accounting policies and procedures to ensure consistency in financial reporting. Our framework aligns with industry standards and regulatory requirements, improving clarity and transparency in financial records. This supports better financial analysis and informed decision-making.",
+                  "We define standardized accounting policies and procedures to ensure consistency in financial reporting. Our framework aligns with industry standards and regulatory requirements, improving clarity and transparency in financial records. This supports better financial analysis and informed decision-making.Accounting Policies and Procedures establish a structured framework for consistent and accurate financial reporting. We help define clear guidelines aligned with regulatory standards and business needs. Our approach ensures transparency, uniformity, and compliance across all financial activities. This strengthens financial discipline and supports reliable decision-making.",
                 
                 ]
               },
@@ -413,7 +369,7 @@ export default function Services() {
                 icon: "🖥️",
                 desc: "Implementation of accounting systems",
                 items: [
-                  "We assist in setting up efficient accounting systems and software tailored to your business needs. Our approach ensures proper recording and tracking of transactions while automating processes for improved accuracy and efficiency. This enables real-time financial insights and better control over operations.",
+                  "We assist in setting up efficient accounting systems and software tailored to your business needs. Our approach ensures proper recording and tracking of transactions while automating processes for improved accuracy and efficiency. This enables real-time financial insights and better control over operations.Setting up an Accounting System ensures a strong financial foundation for efficient operations. We design and implement systems tailored to your business size and requirements. Our solutions improve accuracy, automation, and real-time financial tracking. This enables better control and streamlined financial management.",
                 
                 ]
               },
@@ -423,7 +379,7 @@ export default function Services() {
                 icon: "📊",
                 desc: "Management information systems",
                 items: [
-                  "We generate comprehensive management information system (MIS) reports that provide valuable insights into business performance, trends, and key metrics. These reports enable data-driven decision-making and improve monitoring of financial and operational activities. This ensures timely and informed business strategies.",
+                  "We generate comprehensive management information system (MIS) reports that provide valuable insights into business performance, trends, and key metrics. These reports enable data-driven decision-making and improve monitoring of financial and operational activities. This ensures timely and informed business strategies.MIS Reporting provides timely and structured financial insights for effective decision-making. We create customized reports that track performance, trends, and key metrics. Our reports help management monitor operations and identify improvement areas. This ensures better planning, control, and strategic growth.",
                 
                 ]
               },
@@ -433,7 +389,7 @@ export default function Services() {
                 icon: "🎯",
                 desc: "Year-end financial closing process",
                 items: [
-                  "We manage year-end financial closing activities by ensuring accurate preparation of financial statements and proper reconciliation of accounts. Our team assists with tax filings and statutory submissions while maintaining full compliance with legal requirements. This ensures a smooth, timely, and error-free closure process.",
+                  "We manage year-end financial closing activities by ensuring accurate preparation of financial statements and proper reconciliation of accounts. Our team assists with tax filings and statutory submissions while maintaining full compliance with legal requirements. This ensures a smooth, timely, and error-free closure process.Year End Accounts Closure and Filing ensures accurate finalization of financial statements and compliance with regulations. We handle reconciliations, adjustments, and preparation of annual reports. Our team ensures timely filing with relevant authorities to avoid penalties. This guarantees a smooth and compliant year-end process.",
                  
                 ]
               },
@@ -487,17 +443,8 @@ export default function Services() {
       {selected && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4 overflow-y-auto">
 
-          <div className="bg-white rounded-2xl max-w-3xl w-full overflow-hidden my-8">
+          <div className="bg-white rounded-2xl max-w-6xl w-full overflow-hidden my-8">
 
-            {/* CLOSE BUTTON */}
-            <div className="flex justify-end p-4 bg-gray-50 border-b">
-              <button
-                onClick={() => setSelected(null)}
-                className="text-3xl font-bold text-gray-600 hover:text-gray-900 hover:bg-gray-200 rounded-full w-10 h-10 flex items-center justify-center transition"
-              >
-                ×
-              </button>
-            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2">
 
@@ -515,14 +462,11 @@ export default function Services() {
                     {selected.title}
                   </h2>
 
-                  <h3 className="text-lg font-semibold mb-4 text-green-200">
-                    Key Features:
-                  </h3>
 
                   <ul className="space-y-3">
                     {selected.points && selected.points.map((point, i) => (
                       <li key={i} className="flex gap-3 items-start">
-                        <span className="text-green-300 mt-1">✓</span>
+                      
                         <span className="text-gray-100 text-sm md:text-base">{point}</span>
                       </li>
                     ))}

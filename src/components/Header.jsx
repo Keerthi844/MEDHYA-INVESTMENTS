@@ -8,10 +8,13 @@ export default function Header() {
   return (
     <header className="bg-white shadow-md fixed top-0 w-full z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <div className="flex items-center gap-2">
-          <img src={medhyaLogo} alt="Medhya Investments" className="h-12 w-auto" />
-          
-        </div>
+       <div className="flex items-center gap-2">
+  <img
+    src={medhyaLogo}
+    alt="Medhya Investments"
+    className="h-12 w-12 rounded-full object-cover"
+  />
+</div>
 
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
