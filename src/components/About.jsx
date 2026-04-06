@@ -28,7 +28,7 @@ function AboutSection() {
   const cards = [
     {
       title: "VISION",
-      text: "To be India’s most trusted financial partner — delivering clarity, confidence, and long-term value in complex capital markets."
+      text: "To be India’s most trusted financial partner delivering clarity, confidence, and long-term value in complex capital markets."
     },
     {
       title: "MISSION",
@@ -36,7 +36,7 @@ function AboutSection() {
     },
     {
       title: "PHILOSOPHY",
-      text: "We operate at the intersection of Capital, Clarity, and Conviction — where disciplined strategy meets long-term value creation."
+      text: "We operate at the intersection of Capital, Clarity, and Conviction where disciplined strategy meets long-term value creation."
     }
   ];
 
@@ -62,7 +62,7 @@ function AboutSection() {
           </h2>
 
           <p className="text-gray-700 max-w-2xl">
-            Medhya Investment Advisors delivers end-to-end financial solutions —
+            Medhya Investment Advisors delivers end-to-end financial solutions 
             from startup fundraising to individual wealth creation, guided by clarity and conviction.
           </p>
 

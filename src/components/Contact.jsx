@@ -48,8 +48,8 @@ function ContactSection() {
                 <FaEnvelope />
               </div>
               <div>
-                <p className="text-xs text-gray-500">EMAIL</p>
-                <p className="text-sm text-gray-800">info@medhya.in</p>
+                <p className="text-gray-500 ">EMAIL</p>
+                <p className="text-sm text-gray-800">Info@medhyainvestments.com</p>
               </div>
             </div>
 
@@ -58,7 +58,7 @@ function ContactSection() {
                 <FaPhone />
               </div>
               <div>
-                <p className="text-xs text-gray-500">PHONE</p>
+                <p className=" text-gray-500">PHONE</p>
                 <p className="text-sm text-gray-800">+91 98765 43210</p>
               </div>
             </div>
@@ -68,7 +68,7 @@ function ContactSection() {
                 <FaMapMarkerAlt />
               </div>
               <div>
-                <p className="text-xs text-gray-500">LOCATION</p>
+                <p className="text-gray-500">LOCATION</p>
                 <p className="text-sm text-gray-800">Hyderabad, India</p>
               </div>
             </div>

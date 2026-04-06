@@ -2,35 +2,22 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { FaLightbulb, FaBullseye, FaChartBar, FaChartLine, FaUserTie, FaShieldAlt, FaCheckCircle } from 'react-icons/fa'
 import { motion } from 'framer-motion'
-import image from '../pages/images/image.webp'
+
 
 // Hero Section
 function Hero() {
     const navigate = useNavigate()
 
     return (
-        <section className="py-16 relative overflow-hidden min-h-screen lg:min-h-[600px]">
-            {/* BACKGROUND IMAGE - FULL WIDTH ON MOBILE, LEFT HALF ON DESKTOP */}
+        <section className="py-16 bg-sky-100 text-gray-900 relative overflow-hidden">
 
-            <div className="absolute inset-y-0 left-0 w-full lg:w-1/2 z-0">
-                <img
-                    src={image}
-                    alt="background"
-                    className="w-full h-full object-cover object-center lg:object-left"
-                />
-                {/* Gradient fade on mobile to ensure text is readable */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white lg:hidden"></div>
-            </div>
-
-            {/* RIGHT SKY BLUE BACKGROUND - HIDDEN ON MOBILE */}
-            <div className="hidden lg:block absolute inset-y-0 right-0 w-1/2 bg-sky-100 z-0"></div>
-
-            {/* EXTRA BLOBS */}
-            <div className="absolute -top-32 -left-32 w-96 h-96 bg-sky-200/40 rounded-full blur-3xl z-20"></div>
-            <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-sky-500/40 rounded-full blur-3xl z-20"></div>
+            {/* BACKGROUND */}
+            <div className="absolute top-0 left-0 w-full h-1/2 bg-sky-50 -z-10"></div>
+            <div className="absolute -top-32 -left-32 w-96 h-96 bg-sky-200/40 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-sky-500/40 rounded-full blur-3xl"></div>
 
             {/* MAIN GRID */}
-            <div className="relative z-30 max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
+            <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
 
                 {/* LEFT CONTENT */}
                 <motion.div
@@ -60,7 +47,7 @@ function Hero() {
                         transition={{ delay: 0.3 }}
                         className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight mb-6"
                     >
-                        <span className="text-white">WHERE CAPITAL</span>
+                        <span className="text-gray-800">WHERE CAPITAL</span>
                         <br />
                         <span className="text-sky-600">MEETS CLARITY</span>
                     </motion.h1>
@@ -70,19 +57,19 @@ function Hero() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5 }}
-                        className="text-white italic text-base sm:text-lg mb-4"
+                        className="text-sky-500 italic text-base sm:text-lg mb-4"
                     >
                         Empowering Wealth. Enabling Growth.
                     </motion.p>
 
-                    {/* DESCRIPTION */} 
+                    {/* DESCRIPTION */}
                     <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.6 }}
-                        className="text-black lg:text-sky-400 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 mb-6 font-bold"
+                        className="text-gray-600 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 mb-6 font-bold"
                     >
-                        Medhya Investment Advisors delivers end-to-end financial solutions — guiding startups through fund-raising and IPOs while empowering individuals with strategic wealth creation, tax efficiency, and financial independence.
+                        Medhya Investment Advisors delivers end-to-end financial solutions guiding startups through fund-raising and IPOs while empowering individuals with strategic wealth creation, tax efficiency, and financial independence.
                     </motion.p>
 
                     {/* BUTTONS */}
@@ -101,7 +88,7 @@ function Hero() {
 
                         <button
                             onClick={() => navigate('/contact')}
-                            className="border border-sky-400 text-white px-6 py-3 rounded-full font-semibold"
+                            className="border border-sky-400 text-sky-600 px-6 py-3 rounded-full font-semibold"
                         >
                             I'm an Investor
                         </button>
@@ -109,16 +96,17 @@ function Hero() {
 
                 </motion.div>
 
+
                 {/* RIGHT CARD */}
                 <div className="bg-white border border-sky-100 rounded-2xl p-5 sm:p-6 shadow-md">
 
-                    <h3 className="text-sky-700 text-xs font-semibold tracking-wider mb-4">
+                    <h3 className="text-sky-700  font-bold tracking-wider mb-4">
                         STARTUP JOURNEY
                     </h3>
 
                     {/* LIFECYCLE */}
                     <div className="mb-6">
-                        <p className="text-sky-500 text-xs mb-3 font-bold">Lifecycle Stages</p>
+                        <p className="text-sky-500  mb-3 font-bold">Lifecycle Stages</p>
 
                         <div className="flex flex-wrap justify-center items-center gap-3">
 
@@ -140,7 +128,7 @@ function Hero() {
                                             {num}
                                         </motion.div>
 
-                                        <p className="text-[10px] text-gray-600 mt-1 text-center font-semibold">
+                                        <p className="text-[10px] text-gray-600 mt-1 text-center font-bold">
                                             {['Ideation', 'Product dev', 'Go-To-Market', 'Scaling', 'Maturity'][i]}
                                         </p>
                                     </div>
@@ -163,9 +151,9 @@ function Hero() {
                     </div>
                     {/* FUNDING */}
                     <div>
-                        <p className="text-sky-500 text-xs mb-3 font-bold">Funding Stages</p>
+                        <p className="text-sky-500  mb-3 font-bold">Funding Stages</p>
 
-                        <div className="flex flex-wrap justify-center items-center gap-2 font-semibold"> 
+                        <div className="flex flex-wrap justify-center items-center gap-2 font-semibold">
 
                             {['Friends & Family', 'Seed Capital', 'Venture Funding', 'Growth', 'IPO'].map((label, i) => (
                                 <React.Fragment key={i}>
@@ -185,7 +173,7 @@ function Hero() {
                                             ₹
                                         </motion.div>
 
-                                        <p className="text-[10px] text-gray-600 mt-1 text-center">
+                                        <p className="text-[10px] text-gray-600 mt-1 text-center font-bold">
                                             {label}
                                         </p>
                                     </div>
@@ -205,10 +193,10 @@ function Hero() {
                             ))}
 
                         </div>
-                    </div><div className="flex justify-between items-center mt-6 text-xs sm:text-sm">
-                        <span className="text-gray-500 font-semibold">From idea to IPO</span>
-                        <span className="text-sky-600 font-semibold">
-                            End-to-End Support →
+                    </div><div className="flex justify-between items-center mt-6 ">
+                        <span className="text-sky-700 font-bold">From idea to IPO</span>
+                        <span className="text-sky-700 font-bold">
+                            End-to-End Support
                         </span>
                     </div>
 
@@ -295,7 +283,7 @@ function WhatWeDo() {
 
                 {/* HEADING */}
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center">
-                    From Idea to Capital —
+                    From Idea to Capital
                     <span className="text-sky-600"> We Support the Entire Journey</span>
                 </h2>
 
@@ -335,7 +323,7 @@ function WhatWeDo() {
                                     {card.items.map((item, i) => (
                                         <li key={i} className="flex gap-3 items-start">
 
-                                            <div className="w-5 h-5 rounded-full border border-sky-400 flex items-center justify-center text-sky-500 text-xs">
+                                            <div className="w-5 h-5 rounded-full border border-sky-700 flex items-center justify-center text-sky-500">
                                                 ✓
                                             </div>
 
@@ -412,7 +400,7 @@ function ValueProposition() {
                 >
                     <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                         <span className="text-gray-800">
-                            We Don't Just Advise —
+                            We Don't Just Advise
                         </span>
                         <br />
                         <span className="text-sky-600">
@@ -539,7 +527,7 @@ function HowItWorks() {
                                 </h3>
 
                                 {/* DESCRIPTION */}
-                                <p className="text-gray-600 text-sm max-w-[180px]">
+                                <p className="text-gray-500 text-sm max-w-[180px]">
                                     {step.desc}
                                 </p>
 

@@ -90,7 +90,7 @@ Empowering Wealth. Enabling Growth.
 
             <p className="text-sm text-gray-700 mb-4">
               <span className="font-semibold">Email:</span> <br />
-              hello@medhya.com
+           Info@medhyainvestments.com
             </p>
 
             <div className="flex gap-3">
