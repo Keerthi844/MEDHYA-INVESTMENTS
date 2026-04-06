@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
 function AboutSection() {
+
+  useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+  }, []);
 
   const team = [
     { initials: "DK", name: "Devender Kodam", role: "Managing Director" },

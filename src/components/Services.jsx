@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 export default function Services() {
@@ -7,6 +7,11 @@ export default function Services() {
   const tabParam = searchParams.get("tab") || "startups";
 
   const [activeTab, setActiveTab] = useState(tabParam);
+
+  useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>

@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaUsers, FaChartLine, FaExchangeAlt, FaHandshake, FaCogs } from "react-icons/fa";
 
 function WhyChoose() {
+  useEffect(() => {
+    // Scroll to top when component mounts
+    window.scrollTo(0, 0);
+  }, []);
 
   const data = [
     {
