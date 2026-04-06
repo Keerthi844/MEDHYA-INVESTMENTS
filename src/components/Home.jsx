@@ -75,12 +75,12 @@ function Hero() {
                         Empowering Wealth. Enabling Growth.
                     </motion.p>
 
-                    {/* DESCRIPTION */}
+                    {/* DESCRIPTION */} 
                     <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.6 }}
-                        className="text-black lg:text-sky-500 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 mb-6"
+                        className="text-black lg:text-sky-400 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 mb-6 font-bold"
                     >
                         Medhya Investment Advisors delivers end-to-end financial solutions — guiding startups through fund-raising and IPOs while empowering individuals with strategic wealth creation, tax efficiency, and financial independence.
                     </motion.p>
@@ -118,7 +118,7 @@ function Hero() {
 
                     {/* LIFECYCLE */}
                     <div className="mb-6">
-                        <p className="text-sky-500 text-xs mb-3">Lifecycle Stages</p>
+                        <p className="text-sky-500 text-xs mb-3 font-bold">Lifecycle Stages</p>
 
                         <div className="flex flex-wrap justify-center items-center gap-3">
 
@@ -140,7 +140,7 @@ function Hero() {
                                             {num}
                                         </motion.div>
 
-                                        <p className="text-[10px] text-gray-600 mt-1 text-center">
+                                        <p className="text-[10px] text-gray-600 mt-1 text-center font-semibold">
                                             {['Ideation', 'Product dev', 'Go-To-Market', 'Scaling', 'Maturity'][i]}
                                         </p>
                                     </div>
@@ -163,9 +163,9 @@ function Hero() {
                     </div>
                     {/* FUNDING */}
                     <div>
-                        <p className="text-sky-500 text-xs mb-3">Funding Stages</p>
+                        <p className="text-sky-500 text-xs mb-3 font-bold">Funding Stages</p>
 
-                        <div className="flex flex-wrap justify-center items-center gap-2">
+                        <div className="flex flex-wrap justify-center items-center gap-2 font-semibold"> 
 
                             {['Friends & Family', 'Seed Capital', 'Venture Funding', 'Growth', 'IPO'].map((label, i) => (
                                 <React.Fragment key={i}>
@@ -206,7 +206,7 @@ function Hero() {
 
                         </div>
                     </div><div className="flex justify-between items-center mt-6 text-xs sm:text-sm">
-                        <span className="text-gray-500">From idea to IPO</span>
+                        <span className="text-gray-500 font-semibold">From idea to IPO</span>
                         <span className="text-sky-600 font-semibold">
                             End-to-End Support →
                         </span>
@@ -534,7 +534,7 @@ function HowItWorks() {
                                 </motion.div>
 
                                 {/* TITLE */}
-                                <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-sky-600 transition">
+                                <h3 className="font-bold text-gray-900 mb-2 group-hover:text-sky-600 transition">
                                     {step.title}
                                 </h3>
 

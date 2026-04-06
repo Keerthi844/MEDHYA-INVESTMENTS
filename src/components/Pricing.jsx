@@ -63,43 +63,43 @@ function WhyChoose() {
       <div className="absolute -top-20 -left-20 w-72 h-72 bg-sky-200/40 rounded-full blur-3xl"></div>
       <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-sky-300/40 rounded-full blur-3xl"></div>
 
-      <div className="max-w-5xl mx-auto px-4 relative z-10">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
 
         {/* HEADING */}
-        <div className="text-center mb-12 px-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+        <div className="text-center mb-12 px-0 sm:px-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
             Why Choose <span className="text-sky-600">Medhya</span>
           </h2>
-          <p className="text-gray-600 mt-3">
+          <p className="text-gray-600 mt-3 text-sm sm:text-base">
             Five pillars that define our commitment to excellence.
           </p>
         </div>
 
         {/* CARDS */}
-        <div className="space-y-6 mt-20">
+        <div className="space-y-4 sm:space-y-6 mt-20">
 
           {data.map((item, i) => (
             <div
               key={i}
-              className="bg-white border border-sky-100 rounded-2xl p-6 shadow-md 
+              className="bg-white border border-sky-100 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-md 
               hover:shadow-xl hover:-translate-y-1 hover:bg-sky-100 transition-all duration-300"
             >
 
-              <div className="grid md:grid-cols-2 gap-6 items-start">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 items-start">
 
                 {/* LEFT */}
-                <div className="flex gap-4">
+                <div className="flex gap-3 sm:gap-4">
 
-                  <div className="w-12 h-12 flex items-center justify-center 
-                    bg-sky-100 text-sky-600 rounded-xl text-xl">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center 
+                    bg-sky-100 text-sky-600 rounded-lg sm:rounded-xl text-lg sm:text-xl flex-shrink-0">
                     {item.icon}
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-gray-600 text-sm">
+                    <p className="text-gray-600 text-xs sm:text-sm">
                       {item.desc}
                     </p>
                   </div>
@@ -107,11 +107,11 @@ function WhyChoose() {
                 </div>
 
                 {/* RIGHT */}
-                <ul className="space-y-2 text-sm text-gray-600">
+                <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-gray-600">
                   {item.points.map((point, idx) => (
-                    <li key={idx} className="flex items-center gap-2">
-                      <span className="text-sky-500">✔</span>
-                      {point}
+                    <li key={idx} className="flex items-start gap-2">
+                      <span className="text-sky-500 flex-shrink-0">✔</span>
+                      <span>{point}</span>
                     </li>
                   ))}
                 </ul>

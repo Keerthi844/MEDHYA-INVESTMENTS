@@ -17,7 +17,7 @@ function ContactSection() {
           Get in <span className="text-sky-600">Touch</span>
         </h2>
         <p className="text-gray-600 mt-3 max-w-xl mx-auto">
-          Whether you're a startup seeking capital or an investor seeking opportunity — we're here to help.
+          Whether you're a startup seeking capital or an investor seeking opportunity  we're here to help.
         </p>
       </div>
 
@@ -74,7 +74,7 @@ function ContactSection() {
           {/* QUOTE BOX */}
           <div className="border border-sky-100 bg-sky-100 p-4 rounded-xl">
             <p className="text-sm text-gray-600 italic">
-              “Enduring value is designed — not accidental. Every great company begins with the right financial foundation.”
+              “Enduring value is designed not accidental. Every great company begins with the right financial foundation.”
             </p>
             <p className="text-sky-600 text-xs mt-2 font-semibold">
               — Medhya Team

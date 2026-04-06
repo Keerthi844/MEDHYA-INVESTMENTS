@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import medhyaLogo from "../assets/medhya_high_res-Photoroom.png"
 export default function Footer() {
   const navLinks = [
@@ -9,6 +9,12 @@ export default function Footer() {
     { name: "Services", path: "/services" },
     { name: "Why Choose Us", path: "/pricing" },
     { name: "Contact", path: "/contact" },
+  ];
+
+  const socialLinks = [
+    { icon: FaInstagram, url: "https://www.instagram.com/medhyainvestments/?hl=en", label: "Instagram" },
+    { icon: FaTwitter, url: "https://x.com/medhya2023", label: "Twitter" },
+    { icon: FaLinkedinIn, url: "https://www.linkedin.com/company/medhya-investments/?viewAsMember=true", label: "LinkedIn" },
   ];
 
   return (
@@ -88,14 +94,17 @@ Empowering Wealth. Enabling Growth.
             </p>
 
             <div className="flex gap-3">
-              {[FaFacebookF, FaTwitter, FaInstagram, FaYoutube].map((Icon, i) => (
+              {socialLinks.map((social, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={social.label}
                   className="w-9 h-9 flex items-center justify-center border border-sky-400 rounded-full 
               text-sky-600 hover:bg-sky-500 hover:text-white hover:border-sky-500 transition"
                 >
-                  <Icon size={14} />
+                  <social.icon size={14} />
                 </a>
               ))}
             </div>
