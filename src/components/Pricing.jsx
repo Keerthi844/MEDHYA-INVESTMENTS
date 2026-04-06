@@ -1,286 +1,131 @@
-import React, { useState } from "react";
+import React from "react";
+import { FaUsers, FaChartLine, FaExchangeAlt, FaHandshake, FaCogs } from "react-icons/fa";
 
-const features = [
+function WhyChoose() {
+
+  const data = [
     {
-        title: "Multi-Disciplinary Expertise",
-        desc: "Integrated expertise across finance, legal, and management domains.",
-        image: "https://images.unsplash.com/photo-1552664730-d307ca884978",
-        content: "Our team brings together experts from Chartered Accountancy, Company Secretarial, CPA, Banking, Management, and Legal domains. This integrated approach ensures comprehensive decision-making rather than fragmented advice. We combine financial acumen with legal expertise to provide holistic solutions tailored to your organization's unique needs."
+      icon: <FaUsers />,
+      title: "Multi-Disciplinary Expertise",
+      desc: "Our team is a rare confluence of Chartered Accountants, Company Secretaries, CPAs, ex-Bankers, Management graduates, and Legal experts — delivering 360° financial intelligence under one roof.",
+      points: [
+        "CA, CS, CPA certified professionals",
+        "Ex-banking and legal domain experts",
+        "Management graduates with strategic vision"
+      ]
     },
     {
-        title: "End-to-End Financial Solutions",
-        desc: "From ideation to IPO readiness and wealth creation.",
-        image: "https://st5.depositphotos.com/18719442/65097/i/450/depositphotos_650976462-stock-photo-businesspeople-working-documents-office-table.jpg",
-        content: "We support you at every stage of your financial journey. Starting from initial ideation and business planning through capital raising, we guide you with strategic financial planning. Our services extend to IPO readiness and long-term wealth creation strategies, ensuring sustainable growth and success at every milestone."
+      icon: <FaChartLine />,
+      title: "End-to-End Financial Solutions",
+      desc: "From the spark of an idea to a successful exit — Medhya is your lifelong financial partner across every milestone.",
+      points: [
+        "From ideation to IPO/acquisition",
+        "All services under one platform",
+        "Seamless cross-functional coordination"
+      ]
     },
     {
-        title: "Deep Transaction Expertise",
-        desc: "Strong support in valuation, M&A, and deal structuring.",
-        image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
-        content: "Our transaction expertise spans valuation analysis, mergers and acquisitions, and complex deal structuring. We bring precision and strategic insight to every transaction, ensuring proper due diligence, fair valuations, and optimized deal structures that maximize value for all stakeholders involved."
+      icon: <FaExchangeAlt />,
+      title: "Deep Transaction Expertise",
+      desc: "Structuring complex deals and executing M&A transactions requires precision — we bring real-world experience to every deal.",
+      points: [
+        "M&A structuring & execution",
+        "Multi-stage fundraising",
+        "Cross-border transaction advisory"
+      ]
     },
     {
-        title: "Founder & Investor Alignment",
-        desc: "Bridging capital and execution with structured advisory.",
-        image: "https://images.unsplash.com/photo-1552664730-d307ca884978",
-        content: "We bridge the critical gap between founder vision and investor expectations through structured advisory. By aligning goals, refining financial narratives, and ensuring transparent communication, we help build trust between founders and investors, resulting in deals that drive meaningful outcomes."
+      icon: <FaHandshake />,
+      title: "Founder & Investor Alignment",
+      desc: "We understand both sides — enabling better decision-making and stronger partnerships.",
+      points: [
+        "Balanced founder-investor perspective",
+        "Conflict resolution & alignment",
+        "Long-term relationship building"
+      ]
     },
     {
-        title: "Process-Driven Approach",
-        desc: "Scalable systems focused on clarity and returns.",
-        image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
-        content: "Our process-driven methodology ensures consistency, clarity, and measurable results. We implement scalable systems and frameworks that provide transparency throughout your journey. Every process is optimized for efficiency, making it easier to track progress, achieve milestones, and maximize returns."
-    },
-];
+      icon: <FaCogs />,
+      title: "Process-Driven Approach",
+      desc: "Our structured frameworks ensure consistency, transparency, and measurable outcomes.",
+      points: [
+        "Proprietary valuation frameworks",
+        "Transparent processes",
+        "Data-driven decision making"
+      ]
+    }
+  ];
 
-export default function WhyChooseUs() {
-    const [selectedCard, setSelectedCard] = useState(null);
+  return (
+    <section className="pt-28 pb-20 bg-white relative overflow-hidden">
+    {/* SKY BACKGROUND */}
+    <div className="absolute top-0 left-0 w-full h-[260px] bg-gradient-to-r from-sky-200 via-sky-300 to-sky-400 z-0"></div>
+      <div className="absolute -top-20 -left-20 w-72 h-72 bg-sky-200/40 rounded-full blur-3xl"></div>
+      <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-sky-300/40 rounded-full blur-3xl"></div>
 
-    return (
-        <div className="bg-gray-100 min-h-screen">
+      <div className="max-w-5xl mx-auto px-4 relative z-10">
 
-            {/* ================= HERO ================= */}
-            <div className="relative max-w-6xl mx-auto mt-6 rounded-xl overflow-hidden">
-                <img
-                    src="https://www.stratnavapp.com/content/images/blog/BusinessStrategyConsultant.jpg"
-                    className="w-full h-[350px] md:h-[450px] object-cover"
-                />
-                <div className="absolute inset-0 bg-black/40"></div>
+        {/* HEADING */}
+        <div className="text-center mb-12 px-10">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900">
+            Why Choose <span className="text-sky-600">Medhya</span>
+          </h2>
+          <p className="text-gray-600 mt-3">
+            Five pillars that define our commitment to excellence.
+          </p>
+        </div>
 
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-                    <h1 className="text-4xl font-semibold text-green-300">Why Choose Us</h1>
-                    <p className="text-sm mt-2">
-                        Discover what makes us the preferred choice for financial advisory services.
+        {/* CARDS */}
+        <div className="space-y-6 mt-20">
+
+          {data.map((item, i) => (
+            <div
+              key={i}
+              className="bg-white border border-sky-100 rounded-2xl p-6 shadow-md 
+              hover:shadow-xl hover:-translate-y-1 hover:bg-sky-100 transition-all duration-300"
+            >
+
+              <div className="grid md:grid-cols-2 gap-6 items-start">
+
+                {/* LEFT */}
+                <div className="flex gap-4">
+
+                  <div className="w-12 h-12 flex items-center justify-center 
+                    bg-sky-100 text-sky-600 rounded-xl text-xl">
+                    {item.icon}
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm">
+                      {item.desc}
                     </p>
+                  </div>
+
                 </div>
+
+                {/* RIGHT */}
+                <ul className="space-y-2 text-sm text-gray-600">
+                  {item.points.map((point, idx) => (
+                    <li key={idx} className="flex items-center gap-2">
+                      <span className="text-sky-500">✔</span>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+
+              </div>
+
             </div>
-
-            {/* ================= GRADIENT CARDS WITH EXPANDING CORNER ================= */}
-            <section className="py-16 bg-white">
-                <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
-                    Our Strengths
-                </h2>
-
-                <style>{`
-                    .card-container {
-                        position: relative;
-                        max-width: 350px;
-                        background: linear-gradient(to bottom, #e1e9e1, #ffffff);
-                        border-radius: 10px;
-                        padding: 2em 1.2em;
-                        margin: 12px;
-                        text-decoration: none;
-                        z-index: 0;
-                        overflow: hidden;
-                        font-family: Arial, Helvetica, sans-serif;
-                        transition: all 0.3s ease;
-                        cursor: pointer;
-                        min-height: 270px;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-between;
-                    }
-
-                    .card-container:before {
-                        content: '';
-                        position: absolute;
-                        z-index: -1;
-                        top: -16px;
-                        right: -16px;
-                        background: linear-gradient(135deg, #059669, #10b981);
-                        height: 32px;
-                        width: 32px;
-                        border-radius: 32px;
-                        transform: scale(1);
-                        transform-origin: 50% 50%;
-                        transition: transform 0.35s ease-out;
-                    }
-
-                    .card-container:hover:before {
-                        transform: scale(28);
-                    }
-
-                    .card-title {
-                        color: #262626;
-                        font-size: 1.5em;
-                        line-height: normal;
-                        font-weight: 700;
-                        margin-bottom: 0.5em;
-                        transition: all 0.5s ease-out;
-                    }
-
-                    .card-container:hover .card-title {
-                        color: #ffffff;
-                    }
-
-                    .small-desc {
-                        font-size: 1em;
-                        font-weight: 400;
-                        line-height: 1.5em;
-                        color: #452c2c;
-                        transition: all 0.5s ease-out;
-                    }
-
-                    .card-container:hover .small-desc {
-                        color: rgba(255, 255, 255, 0.8);
-                    }
-
-                    .go-corner {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        position: absolute;
-                        width: 2em;
-                        height: 2em;
-                        overflow: hidden;
-                        top: 0;
-                        right: 0;
-                        background: linear-gradient(135deg, #34d399, #10b981);
-                        border-radius: 0 4px 0 32px;
-                        z-index: 10;
-                    }
-
-                    .go-arrow {
-                        margin-top: -4px;
-                        margin-right: -4px;
-                        color: white;
-                        font-family: courier, sans;
-                        font-weight: bold;
-                    }
-                `}</style>
-
-                <div className="flex flex-wrap justify-center gap-8 px-4">
-                    {features.map((item, index) => (
-                        <div
-                            key={index}
-                            className="card-container group"
-                            onClick={() => setSelectedCard(index)}
-                        >
-                            {/* CORNER ELEMENT */}
-                            <div className="go-corner">
-                                <div className="go-arrow">→</div>
-                            </div>
-
-                            {/* CARD CONTENT */}
-                            <div>
-                                <p className="card-title">{item.title}</p>
-                                <p className="small-desc">{item.desc}</p>
-                            </div>
-
-                            {/* BUTTON */}
-                            <button 
-                                onClick={() => setSelectedCard(index)}
-                                className="mt-4 px-4 py-2 bg-white text-green-700 font-semibold rounded-lg hover:bg-gray-100 transition duration-300">
-                                Learn More
-                            </button>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
-            {/* ================= MODAL ================= */}
-            {selectedCard !== null && (
-                <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
-
-                    <div className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full h-[80vh] overflow-hidden relative">
-
-                        {/* Close Button */}
-                        <button
-                            onClick={() => setSelectedCard(null)}
-                            className="absolute top-4 right-4 z-10 bg-white/80 backdrop-blur px-3 py-1 rounded-full text-gray-700 hover:bg-white shadow"
-                        >
-                            ✕
-                        </button>
-
-                        {/* Modal Content */}
-                        <div className="grid md:grid-cols-2 h-full">
-
-                            {/* LEFT - IMAGE */}
-                            <div className="h-full">
-                                <img
-                                    src={features[selectedCard].image}
-                                    alt={features[selectedCard].title}
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-
-                            {/* RIGHT - CONTENT */}
-                            <div className="p-6 flex flex-col justify-between overflow-y-auto">
-
-                                <div>
-                                    <h2 className="text-2xl font-bold text-gray-900 mb-3">
-                                        {features[selectedCard].title}
-                                    </h2>
-
-                                    <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                                        {features[selectedCard].content}
-                                    </p>
-
-                                    {/* Additional Context */}
-                                    <div className="mb-6 p-4 bg-green-50 rounded-lg border border-green-200">
-                                        <h3 className="text-sm font-semibold text-green-900 mb-2">Why This Matters</h3>
-                                        <p className="text-xs text-green-800 leading-relaxed">
-                                            In today's competitive financial landscape, having access to specialized expertise can be the difference between stagnation and exponential growth. Our approach ensures you're equipped with market-proven strategies and insights.
-                                        </p>
-                                    </div>
-
-                                    {/* Key Highlights */}
-                                    <h3 className="text-lg font-bold text-gray-900 mb-3">Key Highlights</h3>
-                                    <ul className="space-y-2 text-sm mb-6">
-                                        {[
-                                            "Expert consultation tailored to your needs",
-                                            "Proven track record of successful outcomes",
-                                            "Comprehensive support throughout your journey",
-                                            "Transparent and professional service delivery",
-                                            "Industry-leading best practices and frameworks",
-                                            "Measurable results and continuous improvement"
-                                        ].map((item, i) => (
-                                            <li key={i} className="flex items-start gap-2">
-                                                <span className="text-green-600 font-bold">✓</span>
-                                                <p className="text-gray-700">{item}</p>
-                                            </li>
-                                        ))}
-                                    </ul>
-
-                                    {/* Additional Info */}
-                                    <div className="mb-6 bg-gray-50 p-4 rounded-lg">
-                                        <h4 className="text-sm font-semibold text-gray-900 mb-2">What You Get</h4>
-                                        <p className="text-xs text-gray-700 leading-relaxed mb-2">
-                                            Access to a team of certified professionals with decades of combined experience across finance, legal, and strategic domains. We provide not just solutions, but partners who understand your vision and work towards your success.
-                                        </p>
-                                        <p className="text-xs text-gray-700 leading-relaxed">
-                                            Our structured approach ensures consistency in service delivery while maintaining flexibility to adapt to your unique business requirements and challenges.
-                                        </p>
-                                    </div>
-
-                                    {/* CTA */}
-                                   
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )}
-            <section className="py-16 bg-white">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-start px-4">
-
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1598257006458-087169a1f08d"
-              className="rounded-xl shadow-md w-full"
-            />
-          </div>
-
-          <div className="text-gray-700 leading-relaxed">
-            <p>
-              Our team brings expertise across multiple financial and strategic domains, enabling integrated decision-making and long-term value creation. We focus on building strong financial foundations, aligning stakeholders, and executing transactions with precision and clarity.We have experience across finance, legal, and business areas, allowing us to provide complete and well-rounded solutions for your needs.We support you at every stage of your journey, from planning and fundraising to growth and long-term success.We guide you through important financial transactions with proper support in valuation, due diligence, and deal structuring.We help founders and investors stay aligned, ensuring better communication, clear expectations, and smooth execution.We follow structured processes and systems to ensure consistency, efficiency, and reliable results.We provide the right guidance and strategies to help your business grow steadily and achieve long-term goals.
-            </p>
-          </div>
+          ))}
 
         </div>
-      </section>
-        </div>
-        
-    );
+
+      </div>
+    </section>
+  );
 }
+
+export default WhyChoose;

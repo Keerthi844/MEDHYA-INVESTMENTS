@@ -1,50 +1,53 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
-import medhyaLogo from "../assets/medhya_high_res.png"
-
+import medhyaLogo from "../assets/medhya_high_res-Photoroom.png"
 export default function Footer() {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
-    { name: "Pricing", path: "/pricing" },
+    { name: "Why Choose Us", path: "/pricing" },
     { name: "Contact", path: "/contact" },
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-green-900 to-green-800 text-white pt-12 pb-8 px-4 sm:px-6">
-
+    <footer className="bg-gradient-to-br from-sky-200 to-sky-400 text-black pt-12 pb-8 px-4 sm:px-6">
       <div className="max-w-7xl mx-auto">
 
-        {/* Top Section */}
+        {/* TOP */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
 
-          {/* Logo & Brand */}
-          <div className="col-span-1 sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-               <img
-    src={medhyaLogo}
-    alt="Medhya Investments"
-    className="h-16 w-16 rounded-full object-cover"
-  />
+          {/* LOGO */}
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="bg-gradient-to-br from-sky-900 to-white p-1 rounded-full shadow-sm">
+                <img
+                  src={medhyaLogo}
+                  alt="Medhya Logo"
+                  className="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover"
+                />
+              </div>
               <div>
-                <h1 className="text-lg font-bold leading-tight">MEDHYA</h1>
-                <p className="text-xs text-gray-300">INVESTMENTS</p>
+                <h1 className="text-lg font-bold text-black">MEDHYA</h1>
+                <p className="text-xs text-gray-600">INVESTMENTS</p>
               </div>
             </div>
-            <p className="text-sm text-gray-300">Wealth & investment advisory</p>
+            <p className="text-sm text-gray-700">
+            Where Capital Meets Clarity.
+Empowering Wealth. Enabling Growth.
+            </p>
           </div>
 
-          {/* Quick Links */}
+          {/* NAVIGATION */}
           <div>
-            <h3 className="font-semibold mb-4 text-green-300">Quick Links</h3>
+            <h3 className="font-semibold mb-4 text-sky-700">Navigations</h3>
             <ul className="space-y-2">
               {navLinks.map((link, idx) => (
                 <li key={idx}>
                   <Link
                     to={link.path}
-                    className="text-gray-300 hover:text-green-400 transition text-sm"
+                    className="text-gray-700 hover:text-sky-600 transition text-sm"
                   >
                     {link.name}
                   </Link>
@@ -53,78 +56,67 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
-          {/* Services */}
+          {/* COMPANY */}
           <div>
-            <h3 className="font-semibold mb-4 text-green-300">Services</h3>
-
-            <ul className="space-y-2 text-sm text-gray-300">
-
+            <h3 className="font-semibold mb-4 text-sky-700">Company</h3>
+            <ul className="space-y-2 text-sm">
               <li>
-                <Link
-                  to="/services"
-                  className="hover:text-green-400 transition"
-                >
-                  For Startup
+                <Link to="/contact" className="text-gray-700 hover:text-sky-600 transition">
+                  Contact Us
                 </Link>
               </li>
-
               <li>
-                <Link
-                  to="/services"
-                  className="hover:text-green-400 transition"
-                >
-                  Invest Advisory
+                <Link to="" className="text-gray-700 hover:text-sky-600 transition">
+                  Careers
                 </Link>
               </li>
-
               <li>
-                <Link
-                  to="/services"
-                  className="hover:text-green-400 transition"
-                >
-                  Virtual CFO
+                <Link to="" className="text-gray-700 hover:text-sky-600 transition">
+                  Compliance
                 </Link>
               </li>
-
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* CONNECT */}
           <div>
-            <h3 className="font-semibold mb-4 text-green-300">Connect</h3>
-            <div className="space-y-3">
-              <p className="text-sm text-gray-300">
-                <span className="font-semibold">Email:</span> <br />
-                hello@medhya.com
-              </p>
-              <div className="flex gap-3 pt-2">
-                {[FaFacebookF, FaTwitter, FaInstagram, FaYoutube].map((Icon, i) => (
-                  <a
-                    key={i}
-                    href="#"
-                    className="w-9 h-9 flex items-center justify-center border border-gray-400 rounded-full hover:bg-green-500 hover:border-green-500 transition"
-                  >
-                    <Icon size={14} />
-                  </a>
-                ))}
-              </div>
+            <h3 className="font-semibold mb-4 text-sky-700">Connect</h3>
+
+            <p className="text-sm text-gray-700 mb-4">
+              <span className="font-semibold">Email:</span> <br />
+              hello@medhya.com
+            </p>
+
+            <div className="flex gap-3">
+              {[FaFacebookF, FaTwitter, FaInstagram, FaYoutube].map((Icon, i) => (
+                <a
+                  key={i}
+                  href="#"
+                  className="w-9 h-9 flex items-center justify-center border border-sky-400 rounded-full 
+              text-sky-600 hover:bg-sky-500 hover:text-white hover:border-sky-500 transition"
+                >
+                  <Icon size={14} />
+                </a>
+              ))}
             </div>
           </div>
 
         </div>
 
+        {/* DIVIDER */}
+        <div className="border-t border-sky-300 mb-6"></div>
 
-
-        {/* Divider */}
-        <div className="border-t border-gray-400/30 mb-6"></div>
-
-        {/* Bottom */}
-        <div className="flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm text-gray-300 gap-4">
+        {/* BOTTOM */}
+        <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-gray-700 gap-4">
           <p>© 2024 Medhya Investments. All Rights Reserved.</p>
+
           <div className="flex gap-6">
-            <a href="#" className="hover:text-green-400 transition">Privacy Policy</a>
-            <a href="#" className="hover:text-green-400 transition">Terms of Service</a>
+            <a href="#" className="hover:text-sky-600 transition">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-sky-600 transition">
+              Terms of Service
+            </a>
           </div>
         </div>
 
