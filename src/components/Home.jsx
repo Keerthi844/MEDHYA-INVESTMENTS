@@ -215,7 +215,9 @@ function Credibility() {
         "Certified Public Accountants",
         "Banking",
         "Management",
-        "Legal"
+        "Legal",
+        "CPAs",
+        "Ex-Bankers"
     ]
 
     return (
@@ -226,48 +228,64 @@ function Credibility() {
             <div className="absolute -top-20 -left-20 w-72 h-72 bg-sky-200/40 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-sky-300/40 rounded-full blur-3xl"></div>
 
-           {/* TAGS / CHIPS */}
-{/* DESKTOP */}
-<div className="hidden md:flex flex-wrap justify-center gap-4">
-  {tags.map((tag, i) => (
-    <span
-      key={i}
-      className="px-5 py-2 rounded-full border border-sky-300 text-black bg-white shadow-sm hover:bg-sky-200 transition text-sm font-medium"
-    >
-      {tag}
-    </span>
-  ))}
-</div>
+            {/* HEADING */}
+            <div className="text-center mb-12">
+                <h2 className="text-xl md:text-xl font-bold text-sky-600 mb-2">
+                    BUILT BY EXPERTS WHO UNDERSTAND FINANCE END-TO-END
+                </h2>
 
-{/* MOBILE (LIKE IMAGE) */}
-<div className="md:hidden flex flex-col items-center gap-5">
+            </div>
 
-  <span className="px-6 py-2 rounded-full border border-sky-300 text-black bg-white text-center w-full max-w-xs shadow-sm">
-    Chartered Accountants
-  </span>
+            {/* TAGS / CHIPS */}
+            {/* DESKTOP */}
+            <div className="hidden md:flex flex-wrap justify-center gap-4">
+                {tags.map((tag, i) => (
+                    <span
+                        key={i}
+                        className="px-5 py-2 rounded-full border border-sky-300 text-black bg-white shadow-sm hover:bg-sky-200 transition text-sm font-medium"
+                    >
+                        {tag}
+                    </span>
+                ))}
+            </div>
 
-  <span className="px-6 py-2 rounded-full border border-sky-300 text-black bg-white text-center w-full max-w-xs shadow-sm">
-    Company Secretaries
-  </span>
+            {/* MOBILE (LIKE IMAGE) */}
+            <div className="md:hidden flex flex-col items-center gap-5">
 
-  <span className="px-6 py-2 rounded-full border border-sky-300 text-black bg-white text-center w-full max-w-xs shadow-sm">
-    Certified Public Accountants
-  </span>
+                <span className="px-6 py-2 rounded-full border border-sky-300 text-black bg-white text-center w-full max-w-xs shadow-sm">
+                    Chartered Accountants
+                </span>
 
-  <div className="flex gap-4 justify-center w-full">
-    <span className="px-5 py-2 rounded-full border border-sky-300 text-black bg-white text-center flex-1 max-w-[140px] shadow-sm">
-      Banking
-    </span>
-    <span className="px-5 py-2 rounded-full border border-sky-300 text-black bg-white text-center flex-1 max-w-[140px] shadow-sm">
-      Management
-    </span>
-  </div>
+                <span className="px-6 py-2 rounded-full border border-sky-300 text-black bg-white text-center w-full max-w-xs shadow-sm">
+                    Company Secretaries
+                </span>
 
-  <span className="px-5 py-2 rounded-full border border-sky-300 text-black bg-white text-center max-w-[140px] shadow-sm">
-    Legal
-  </span>
+                <span className="px-6 py-2 rounded-full border border-sky-300 text-black bg-white text-center w-full max-w-xs shadow-sm">
+                    Certified Public Accountants
+                </span>
 
-</div>
+                <div className="flex gap-4 justify-center w-full">
+                    <span className="px-5 py-2 rounded-full border border-sky-300 text-black bg-white text-center flex-1 max-w-[140px] shadow-sm">
+                        Banking
+                    </span>
+                    <span className="px-5 py-2 rounded-full border border-sky-300 text-black bg-white text-center flex-1 max-w-[140px] shadow-sm">
+                        Management
+                    </span>
+                </div>
+
+                <div className="flex gap-4 justify-center w-full">
+                    <span className="px-5 py-2 rounded-full border border-sky-300 text-black bg-white text-center flex-1 max-w-[140px] shadow-sm">
+                        Legal
+                    </span>
+                    <span className="px-5 py-2 rounded-full border border-sky-300 text-black bg-white text-center flex-1 max-w-[140px] shadow-sm">
+                        CPAs
+                    </span>
+                </div>
+                <span className="px-5 py-2 rounded-full border border-sky-300 text-black bg-white text-center max-w-[140px] shadow-sm">
+                    Ex-Bankers
+                </span>
+
+            </div>
         </section>
     )
 }
