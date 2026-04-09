@@ -7,7 +7,6 @@ import { motion } from 'framer-motion'
 // Hero Section
 function Hero() {
     const navigate = useNavigate()
-
     return (
         <section className="py-16 bg-sky-100 text-gray-900 relative overflow-hidden">
 
@@ -211,9 +210,9 @@ function Hero() {
 function Credibility() {
 
     const tags = [
-        "Chartered Accountancy",
-        "Company Secretarial",
-        "Certified Public Accountancy",
+        "Chartered Accountants",
+        "Company Secretaries",
+        "Certified Public Accountants",
         "Banking",
         "Management",
         "Legal"
@@ -227,28 +226,48 @@ function Credibility() {
             <div className="absolute -top-20 -left-20 w-72 h-72 bg-sky-200/40 rounded-full blur-3xl"></div>
             <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-sky-300/40 rounded-full blur-3xl"></div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+           {/* TAGS / CHIPS */}
+{/* DESKTOP */}
+<div className="hidden md:flex flex-wrap justify-center gap-4">
+  {tags.map((tag, i) => (
+    <span
+      key={i}
+      className="px-5 py-2 rounded-full border border-sky-300 text-black bg-white shadow-sm hover:bg-sky-200 transition text-sm font-medium"
+    >
+      {tag}
+    </span>
+  ))}
+</div>
 
-                {/* TITLE */}
-                <p className="text-sm tracking-widest text-sky-600 font-bold mb-8">
-                    BUILT BY EXPERTS WHO UNDERSTAND FINANCE END-TO-END
-                </p>
+{/* MOBILE (LIKE IMAGE) */}
+<div className="md:hidden flex flex-col items-center gap-5">
 
-                {/* TAGS / CHIPS */}
-                <div className="flex flex-wrap justify-center gap-4">
+  <span className="px-6 py-2 rounded-full border border-sky-300 text-black bg-white text-center w-full max-w-xs shadow-sm">
+    Chartered Accountants
+  </span>
 
-                    {tags.map((tag, i) => (
-                        <span
-                            key={i}
-                            className="px-5 py-2 rounded-full border border-sky-300 text-black-600 bg-white shadow-sm hover:bg-sky-200 transition text-sm font-medium"
-                        >
-                            {tag}
-                        </span>
-                    ))}
+  <span className="px-6 py-2 rounded-full border border-sky-300 text-black bg-white text-center w-full max-w-xs shadow-sm">
+    Company Secretaries
+  </span>
 
-                </div>
+  <span className="px-6 py-2 rounded-full border border-sky-300 text-black bg-white text-center w-full max-w-xs shadow-sm">
+    Certified Public Accountants
+  </span>
 
-            </div>
+  <div className="flex gap-4 justify-center w-full">
+    <span className="px-5 py-2 rounded-full border border-sky-300 text-black bg-white text-center flex-1 max-w-[140px] shadow-sm">
+      Banking
+    </span>
+    <span className="px-5 py-2 rounded-full border border-sky-300 text-black bg-white text-center flex-1 max-w-[140px] shadow-sm">
+      Management
+    </span>
+  </div>
+
+  <span className="px-5 py-2 rounded-full border border-sky-300 text-black bg-white text-center max-w-[140px] shadow-sm">
+    Legal
+  </span>
+
+</div>
         </section>
     )
 }

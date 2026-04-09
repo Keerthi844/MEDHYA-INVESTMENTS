@@ -99,31 +99,61 @@ function AboutSection() {
           </div>
 
           {/* TEAM BACKGROUND */}
-          <motion.div
-            className="bg-white border border-sky-100 rounded-2xl p-6 shadow-md mb-10"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
+        <motion.div
+  className="bg-white border border-sky-100 rounded-2xl p-6 shadow-md mb-10"
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5 }}
+  viewport={{ once: true }}
+>
 
-            <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">
-              Team <span className="text-sky-600">Background</span>
-            </h2>
+  <h2 className="text-2xl font-bold text-center mb-6">
+    Team <span className="text-sky-600">Background</span>
+  </h2>
 
-            <div className="flex flex-wrap justify-center gap-3">
-              {tags.map((tag, i) => (
-                <span
-                  key={i}
-                  className="px-4 py-2 text-sm border border-sky-300 text-black rounded-full 
-                  hover:bg-sky-300 transition"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
+  {/* DESKTOP */}
+  <div className="hidden md:flex flex-wrap justify-center gap-3">
+    {tags.map((tag, i) => (
+      <span
+        key={i}
+        className="px-4 py-2 text-sm border border-sky-300 text-black rounded-full hover:bg-sky-300 transition"
+      >
+        {tag}
+      </span>
+    ))}
+  </div>
 
-          </motion.div>
+  {/* MOBILE (EXACT IMAGE LAYOUT) */}
+  <div className="md:hidden flex flex-col items-center gap-4">
+
+    <span className="px-4 py-2 text-sm border border-sky-300 text-black rounded-full text-center w-full max-w-xs">
+      Chartered Accountants
+    </span>
+
+    <span className="px-4 py-2 text-sm border border-sky-300 text-black rounded-full text-center w-full max-w-xs">
+      Company Secretaries
+    </span>
+
+    <div className="flex gap-3 justify-center w-full">
+      <span className="px-4 py-2 text-sm border border-sky-300 text-black rounded-full text-center flex-1 max-w-[140px]">
+        CPAs
+      </span>
+      <span className="px-4 py-2 text-sm border border-sky-300 text-black rounded-full text-center flex-1 max-w-[140px]">
+        Ex-Bankers
+      </span>
+    </div>
+
+    <span className="px-4 py-2 text-sm border border-sky-300 text-black rounded-full text-center w-full max-w-xs">
+      Management Graduates
+    </span>
+
+    <span className="px-4 py-2 text-sm border border-sky-300 text-black rounded-full text-center w-full max-w-xs">
+      Legal Experts
+    </span>
+
+  </div>
+
+</motion.div>
 
           {/* TEAM */}
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">

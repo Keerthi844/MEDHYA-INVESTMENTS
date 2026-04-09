@@ -59,7 +59,7 @@ function ContactSection() {
               </div>
               <div>
                 <p className=" text-gray-500">PHONE</p>
-                <p className="text-sm text-gray-800">+91 98765 43210</p>
+                <p className="text-sm text-gray-800">+91 9640331188</p>
               </div>
             </div>
 
