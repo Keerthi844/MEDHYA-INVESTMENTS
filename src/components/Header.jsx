@@ -42,11 +42,14 @@ export default function Header() {
         </button>
 
         {/* MENU */}
-        <div className={`
-      absolute md:relative top-16 md:top-0 left-0 w-full md:w-auto 
-      bg-white md:bg-transparent md:flex gap-8 items-center 
-      ${mobileMenuOpen ? 'block' : 'hidden md:flex'}
-    `}>
+        <div
+          className={`
+    fixed top-0 right-0 h-full w-[70%] sm:w-[50%] bg-white shadow-lg z-50
+    transform transition-transform duration-300
+    ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}
+    md:static md:translate-x-0 md:h-auto md:w-auto md:bg-transparent md:shadow-none md:flex
+  `}
+        >
 
           {/* CLOSE BUTTON */}
           <button
@@ -55,6 +58,8 @@ export default function Header() {
           >
             ✕
           </button>
+            <div className="flex flex-col mt-16"> {/* 👈 push below close icon */}
+
 
           {/* LINKS */}
           {[
@@ -74,6 +79,7 @@ export default function Header() {
             </Link>
           ))}
 
+        </div>
         </div>
 
       </nav>
