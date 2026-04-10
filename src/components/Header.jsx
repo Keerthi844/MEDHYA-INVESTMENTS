@@ -5,14 +5,21 @@ import medhyaLogo from "../assets/medhya_high_res-Photoroom.png"
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  const links = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Why Choose us", path: "/pricing" },
+    { name: "Contact", path: "/contact" }
+  ]
+
   return (
     <header className="bg-white border-b border-sky-200 fixed top-0 w-full z-50 shadow-sm">
+      
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
 
-        {/* LOGO + TEXT */}
+        {/* LOGO */}
         <div className="flex items-center gap-3">
-
-          {/* LOGO IMAGE */}
           <div className="bg-gradient-to-br from-sky-900 to-white p-1 rounded-full shadow-sm">
             <img
               src={medhyaLogo}
@@ -21,7 +28,6 @@ export default function Header() {
             />
           </div>
 
-          {/* TEXT */}
           <h1 className="leading-tight">
             <span className="block text-base sm:text-xl font-bold text-sky-600">
               MEDHYA
@@ -30,7 +36,19 @@ export default function Header() {
               INVESTMENT ADVISORS
             </span>
           </h1>
+        </div>
 
+        {/* DESKTOP MENU ✅ */}
+        <div className="hidden md:flex items-center gap-8">
+          {links.map((link, i) => (
+            <Link
+              key={i}
+              to={link.path}
+              className="text-gray-600 hover:text-sky-600 transition font-medium"
+            >
+              {link.name}
+            </Link>
+          ))}
         </div>
 
         {/* MOBILE MENU BUTTON */}
@@ -41,48 +59,53 @@ export default function Header() {
           ☰
         </button>
 
-        {/* MENU */}
+      </nav>
+
+      {/* 🔥 MOBILE ONLY DRAWER */}
+      <div className="md:hidden">
+
+        {/* OVERLAY */}
+        {mobileMenuOpen && (
+          <div
+            onClick={() => setMobileMenuOpen(false)}
+            className="fixed inset-0 bg-black/40 z-40"
+          />
+        )}
+
+        {/* DRAWER */}
         <div
           className={`
-    fixed top-0 right-0 h-full w-[70%] sm:w-[50%] bg-white shadow-lg z-50
-    transform transition-transform duration-300
-    ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}
-    md:static md:translate-x-0 md:h-auto md:w-auto md:bg-transparent md:shadow-none md:flex
-  `}
+            fixed top-0 right-0 h-full w-[70%] sm:w-[50%] bg-white shadow-lg z-50
+            transform transition-transform duration-300 ease-in-out
+            ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}
+          `}
         >
 
           {/* CLOSE BUTTON */}
           <button
             onClick={() => setMobileMenuOpen(false)}
-            className="md:hidden absolute top-4 right-4 text-gray-600 text-xl"
+            className="absolute top-4 right-4 text-gray-600 text-2xl"
           >
             ✕
           </button>
-            <div className="flex flex-col mt-16"> {/* 👈 push below close icon */}
-
 
           {/* LINKS */}
-          {[
-            { name: "Home", path: "/" },
-            { name: "About", path: "/about" },
-            { name: "Services", path: "/services" },
-            { name: "Why Choose us", path: "/pricing" },
-            { name: "Contact", path: "/contact" }
-          ].map((link, i) => (
-            <Link
-              key={i}
-              to={link.path}
-              onClick={() => setMobileMenuOpen(false)}
-              className="block md:inline text-gray-600 hover:text-sky-600 px-4 py-2 md:p-0 transition font-medium"
-            >
-              {link.name}
-            </Link>
-          ))}
+          <div className="flex flex-col mt-16">
+            {links.map((link, i) => (
+              <Link
+                key={i}
+                to={link.path}
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-6 py-2 text-lg  hover:bg-gray-50"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
 
         </div>
-        </div>
+      </div>
 
-      </nav>
     </header>
   )
 }
