@@ -72,7 +72,7 @@ function WhyChoose() {
         {/* HEADING */}
         <div className="text-center mb-12 px-0 sm:px-6">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-            Why Choose <span className="text-emerald-300">Medhya</span>
+            Why Choose <span className="text-white-300">Medhya</span>
           </h2>
           <p className="text-white/90 mt-3 text-sm sm:text-base">
             Five pillars that define our commitment to excellence.
@@ -86,7 +86,7 @@ function WhyChoose() {
             <div
               key={i}
               className="bg-white border border-navy-100 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-md 
-              hover:shadow-xl hover:-translate-y-1 hover:bg-emerald-50 hover:border-emerald-300 transition-all duration-300"
+              hover:shadow-xl hover:-translate-y-1 hover:bg-white-50 hover:border-white-300 transition-all duration-300"
             >
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 items-start">
@@ -95,7 +95,7 @@ function WhyChoose() {
                 <div className="flex gap-3 sm:gap-4">
 
                   <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center 
-                    bg-navy-100 text-emerald-600 rounded-lg sm:rounded-xl text-lg sm:text-xl flex-shrink-0">
+                    bg-navy-100 text-white-600 rounded-lg sm:rounded-xl text-lg sm:text-xl flex-shrink-0">
                     {item.icon}
                   </div>
 
@@ -114,7 +114,7 @@ function WhyChoose() {
                 <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-gray-600">
                   {item.points.map((point, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <span className="text-emerald-500 flex-shrink-0">✔</span>
+                      <span className="text-white-500 flex-shrink-0">✔</span>
                       <span>{point}</span>
                     </li>
                   ))}

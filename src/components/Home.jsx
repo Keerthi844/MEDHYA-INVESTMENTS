@@ -242,7 +242,7 @@ function Credibility() {
                 {tags.map((tag, i) => (
                     <span
                         key={i}
-                        className="px-5 py-2 rounded-full border border-navy-300 text-black bg-white shadow-sm hover:bg-emerald-100 hover:border-emerald-300 transition text-sm font-medium"
+                        className="px-5 py-2 rounded-full border border-navy-300 text-black bg-white shadow-sm hover:bg-white-100 hover:border-white-300 transition text-sm font-medium"
                     >
                         {tag}
                     </span>
@@ -346,11 +346,11 @@ function WhatWeDo() {
 
                             {/* CARD */}
                             <div className="bg-white border border-navy-100 rounded-2xl p-8 h-full shadow-md 
-    hover:bg-emerald-50 hover:border-emerald-300 hover:shadow-xl hover:-translate-y-2 
+    hover:bg-white-50 hover:border-white-300 hover:shadow-xl hover:-translate-y-2 
     transition-all duration-300">
 
                                 {/* TITLE */}
-                                <h3 className="text-2xl font-bold text-gray-900 mb-6 group-hover:text-emerald-600 transition">
+                                <h3 className="text-2xl font-bold text-gray-900 mb-6 group-hover:text-white-600 transition">
                                     {card.title}
                                 </h3>
 
@@ -359,7 +359,7 @@ function WhatWeDo() {
                                     {card.items.map((item, i) => (
                                         <li key={i} className="flex gap-3 items-start">
 
-                                            <div className="w-5 h-5 rounded-full border border-navy-600 flex items-center justify-center text-navy-600 group-hover:border-emerald-600 group-hover:text-emerald-600 transition">
+                                            <div className="w-5 h-5 rounded-full border border-navy-600 flex items-center justify-center text-navy-600 group-hover:border-white-600 group-hover:text-white-600 transition">
                                                 ✓
                                             </div>
 

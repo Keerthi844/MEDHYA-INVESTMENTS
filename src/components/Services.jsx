@@ -25,7 +25,7 @@ export default function Services() {
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Our <span className="text-emerald-300">Services</span>
+            Our <span className="text-white-300">Services</span>
           </h1>
           <p className="text-white/90 mt-3 max-w-xl mx-auto">
             Comprehensive financial advisory tailored for every stage of the investment lifecycle.
@@ -42,7 +42,7 @@ export default function Services() {
             className={`px-6 py-2 font-semibold transition ${
               activeTab === "startups"
                 ? "bg-navy-600 text-white"
-                : "text-emerald-600 hover:bg-navy-100"
+                : "text-white-600 hover:bg-navy-100"
             }`}
           >
             For Startups
@@ -134,7 +134,7 @@ export default function Services() {
               <div
                 key={i}
                 className="bg-white border border-navy-100 rounded-2xl p-6 shadow-md 
-                hover:shadow-xl hover:-translate-y-2 hover:bg-emerald-50 hover:border-emerald-300
+                hover:shadow-xl hover:-translate-y-2 hover:bg-white-50 hover:border-white-300
                 transition-all duration-300"
               >
                 <h3 className="text-lg font-bold text-navy-900 mb-4">
@@ -144,7 +144,7 @@ export default function Services() {
                 <ul className="space-y-3">
                   {card.points.map((point, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-gray-600 text-sm">
-                      <span className="text-emerald-500">✔</span>
+                      <span className="text-white-500">✔</span>
                       {point}
                     </li>
                   ))}
@@ -204,7 +204,7 @@ export default function Services() {
               <div
                 key={i}
                 className="bg-white border border-navy-100 rounded-2xl p-6 shadow-md 
-                hover:shadow-xl hover:-translate-y-2 hover:bg-emerald-50 hover:border-emerald-300
+                hover:shadow-xl hover:-translate-y-2 hover:bg-white-50 hover:border-white-300
                 transition-all duration-300"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
@@ -214,7 +214,7 @@ export default function Services() {
                 <ul className="space-y-3">
                   {card.points.map((point, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-gray-600 text-sm">
-                      <span className="text-emerald-500">✔</span>
+                      <span className="text-white-500">✔</span>
                       {point}
                     </li>
                   ))}
