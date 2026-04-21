@@ -64,20 +64,20 @@ Empowering Wealth. Enabling Growth.
 
           {/* COMPANY */}
           <div>
-            <h3 className="font-semibold mb-4 text-emerald-400">Company</h3>
+            <h3 className="font-semibold mb-4 text-white-400">Company</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link to="/contact" className="text-gray-100 hover:text-emerald-400 transition">
+                <Link to="/contact" className="text-gray-100 hover:text-white-400 transition">
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link to="" className="text-gray-100 hover:text-emerald-400 transition">
+                <Link to="" className="text-gray-100 hover:text-white-400 transition">
                   Careers
                 </Link>
               </li>
               <li>
-                <Link to="" className="text-gray-100 hover:text-emerald-400 transition">
+                <Link to="" className="text-gray-100 hover:text-white-400 transition">
                   Compliance
                 </Link>
               </li>
