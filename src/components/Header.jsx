@@ -32,7 +32,7 @@ export default function Header() {
               MEDHYA
             </span>
             <span className="block text-[10px] sm:text-xs text-gray-500 tracking-widest">
-              INVESTMENT ADVISORS
+              INVESTMENT
             </span>
           </h1>
         </div>

@@ -86,18 +86,17 @@ function WhyChoose() {
             <div
               key={i}
               className="bg-white border border-navy-100 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-md 
-              hover:shadow-xl hover:-translate-y-1 hover:bg-white-50 hover:border-white-300 transition-all duration-300"
+              hover:shadow-xl hover:-translate-y-1 hover:bg-navy-150 hover:border-black-300 transition-all duration-300"
             >
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 items-start">
 
                 {/* LEFT */}
                 <div className="flex gap-3 sm:gap-4">
-
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center 
-                    bg-navy-100 text-white-600 rounded-lg sm:rounded-xl text-lg sm:text-xl flex-shrink-0">
-                    {item.icon}
-                  </div>
+<div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center 
+  bg-navy-700 text-white rounded-lg sm:rounded-xl text-xl sm:text-2xl font-bold flex-shrink-0">
+  {item.icon}
+</div>
 
                   <div>
                     <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">
@@ -114,7 +113,7 @@ function WhyChoose() {
                 <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-gray-600">
                   {item.points.map((point, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <span className="text-white-500 flex-shrink-0">✔</span>
+                      <span className="text-navy-500 flex-shrink-0">✔</span>
                       <span>{point}</span>
                     </li>
                   ))}

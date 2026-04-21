@@ -23,7 +23,7 @@ export default function Services() {
         <div className="absolute -top-20 -left-20 w-72 h-72 bg-navy-200/30 rounded-full blur-3xl"></div>
         <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-navy-300/30 rounded-full blur-3xl"></div>
 
-        <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Our <span className="text-white-300">Services</span>
           </h1>
@@ -134,7 +134,7 @@ export default function Services() {
               <div
                 key={i}
                 className="bg-white border border-navy-100 rounded-2xl p-6 shadow-md 
-                hover:shadow-xl hover:-translate-y-2 hover:bg-white-50 hover:border-white-300
+                hover:shadow-xl hover:-translate-y-2 hover:bg-navy-200 hover:border-navy-300
                 transition-all duration-300"
               >
                 <h3 className="text-lg font-bold text-navy-900 mb-4">
@@ -204,7 +204,7 @@ export default function Services() {
               <div
                 key={i}
                 className="bg-white border border-navy-100 rounded-2xl p-6 shadow-md 
-                hover:shadow-xl hover:-translate-y-2 hover:bg-white-50 hover:border-white-300
+                hover:shadow-xl hover:-translate-y-2 hover:bg-navy-200 hover:border-navy-300
                 transition-all duration-300"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
