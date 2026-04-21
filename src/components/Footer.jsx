@@ -36,7 +36,7 @@ export default function Footer() {
              
               <div>
                 <h1 className="text-lg font-bold text-white">MEDHYA</h1>
-                <p className="text-xs text-emerald-300">INVESTMENTS</p>
+                <p className="text-xs text-white-300">INVESTMENTS</p>
               </div>
             </div>
             <p className="text-sm text-gray-100">
@@ -47,13 +47,13 @@ Empowering Wealth. Enabling Growth.
 
           {/* NAVIGATION */}
           <div>
-            <h3 className="font-semibold mb-4 text-emerald-400">Navigations</h3>
+            <h3 className="font-semibold mb-4 text-white-400">Navigations</h3>
             <ul className="space-y-2">
               {navLinks.map((link, idx) => (
                 <li key={idx}>
                   <Link
                     to={link.path}
-                    className="text-gray-100 hover:text-emerald-400 transition text-sm"
+                    className="text-gray-100 hover:text-white-400 transition text-sm"
                   >
                     {link.name}
                   </Link>
@@ -86,7 +86,7 @@ Empowering Wealth. Enabling Growth.
 
           {/* CONNECT */}
           <div>
-            <h3 className="font-semibold mb-4 text-emerald-400">Connect</h3>
+            <h3 className="font-semibold mb-4 text-white-400">Connect</h3>
 
             <p className="text-sm text-gray-100 mb-4">
               <span className="font-semibold">Email:</span> <br />
@@ -101,8 +101,8 @@ Empowering Wealth. Enabling Growth.
                   target="_blank"
                   rel="noopener noreferrer"
                   title={social.label}
-                  className="w-9 h-9 flex items-center justify-center border border-emerald-400 rounded-full 
-              text-emerald-400 hover:bg-emerald-500 hover:text-white hover:border-emerald-500 transition"
+                  className="w-9 h-9 flex items-center justify-center border border-white-400 rounded-full 
+              text-white-400 hover:bg-white-500 hover:text-white hover:border-white-500 transition"
                 >
                   <social.icon size={14} />
                 </a>
@@ -120,10 +120,10 @@ Empowering Wealth. Enabling Growth.
           <p>© 2024 Medhya Investments. All Rights Reserved.</p>
 
           <div className="flex gap-6">
-            <a href="#" className="hover:text-emerald-400 transition">
+            <a href="#" className="hover:text-white-400 transition">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-emerald-400 transition">
+            <a href="#" className="hover:text-white-400 transition">
               Terms of Service
             </a>
           </div>
