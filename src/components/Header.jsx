@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import medhyaLogo from "../assets/medhya_high_res-Photoroom.png"
+import medhyaLogo from "../assets/LOGO MEDHYA.png"
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -14,22 +14,21 @@ export default function Header() {
   ]
 
   return (
-    <header className="bg-white border-b border-sky-200 fixed top-0 w-full z-50 shadow-sm">
+    <header className="bg-white border-b border-navy-200 fixed top-0 w-full z-50 shadow-sm">
       
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
 
         {/* LOGO */}
         <div className="flex items-center gap-3">
-          <div className="bg-gradient-to-br from-sky-900 to-white p-1 rounded-full shadow-sm">
+        
             <img
               src={medhyaLogo}
               alt="Medhya Logo"
               className="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover"
             />
-          </div>
-
+        
           <h1 className="leading-tight">
-            <span className="block text-base sm:text-xl font-bold text-sky-600">
+            <span className="block text-base sm:text-xl font-bold text-navy-600">
               MEDHYA
             </span>
             <span className="block text-[10px] sm:text-xs text-gray-500 tracking-widest">
@@ -44,7 +43,7 @@ export default function Header() {
             <Link
               key={i}
               to={link.path}
-              className="text-gray-600 hover:text-sky-600 transition font-medium"
+              className="text-gray-600 hover:text-navy-600 transition font-medium"
             >
               {link.name}
             </Link>
@@ -54,7 +53,7 @@ export default function Header() {
         {/* MOBILE MENU BUTTON */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden text-sky-600 text-2xl"
+          className="md:hidden text-navy-600 text-2xl"
         >
           ☰
         </button>

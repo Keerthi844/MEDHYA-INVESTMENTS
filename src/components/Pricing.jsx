@@ -63,18 +63,18 @@ function WhyChoose() {
   return (
     <section className="pt-28 pb-20 bg-white relative overflow-hidden">
     {/* SKY BACKGROUND */}
-    <div className="absolute top-0 left-0 w-full h-[260px] bg-gradient-to-r from-sky-200 via-sky-300 to-sky-400 z-0"></div>
-      <div className="absolute -top-20 -left-20 w-72 h-72 bg-sky-200/40 rounded-full blur-3xl"></div>
-      <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-sky-300/40 rounded-full blur-3xl"></div>
+    <div className="absolute top-0 left-0 w-full h-[260px] bg-gradient-to-r from-navy-700 via-navy-700 to-navy-700 z-0"></div>
+      <div className="absolute -top-20 -left-20 w-72 h-72 bg-navy-200/30 rounded-full blur-3xl"></div>
+      <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-navy-300/30 rounded-full blur-3xl"></div>
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
 
         {/* HEADING */}
         <div className="text-center mb-12 px-0 sm:px-6">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
-            Why Choose <span className="text-sky-600">Medhya</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+            Why Choose <span className="text-emerald-300">Medhya</span>
           </h2>
-          <p className="text-gray-600 mt-3 text-sm sm:text-base">
+          <p className="text-white/90 mt-3 text-sm sm:text-base">
             Five pillars that define our commitment to excellence.
           </p>
         </div>
@@ -85,8 +85,8 @@ function WhyChoose() {
           {data.map((item, i) => (
             <div
               key={i}
-              className="bg-white border border-sky-100 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-md 
-              hover:shadow-xl hover:-translate-y-1 hover:bg-sky-100 transition-all duration-300"
+              className="bg-white border border-navy-100 rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-md 
+              hover:shadow-xl hover:-translate-y-1 hover:bg-emerald-50 hover:border-emerald-300 transition-all duration-300"
             >
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 items-start">
@@ -95,7 +95,7 @@ function WhyChoose() {
                 <div className="flex gap-3 sm:gap-4">
 
                   <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center 
-                    bg-sky-100 text-sky-600 rounded-lg sm:rounded-xl text-lg sm:text-xl flex-shrink-0">
+                    bg-navy-100 text-emerald-600 rounded-lg sm:rounded-xl text-lg sm:text-xl flex-shrink-0">
                     {item.icon}
                   </div>
 
@@ -114,7 +114,7 @@ function WhyChoose() {
                 <ul className="space-y-1 sm:space-y-2 text-xs sm:text-sm text-gray-600">
                   {item.points.map((point, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <span className="text-sky-500 flex-shrink-0">✔</span>
+                      <span className="text-emerald-500 flex-shrink-0">✔</span>
                       <span>{point}</span>
                     </li>
                   ))}

@@ -5,15 +5,53 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+    colors: {
+      transparent: 'transparent',
+      current: 'currentColor',
+      white: '#ffffff',
+      black: '#000000',
+      gray: {
+        50: '#f9fafb',
+        100: '#f3f4f6',
+        200: '#e5e7eb',
+        300: '#d1d5db',
+        400: '#9ca3af',
+        500: '#6b7280',
+        600: '#4b5563',
+        700: '#374151',
+        800: '#1f2937',
+        900: '#111827',
       },
-      colors: {
-        primary: '#3B82F6',
-        secondary: '#1F2937',
-      }
+      navy: {
+        50: '#F0F4F9',
+        100: '#E0E9F3',
+        150: '#D1DEE9',
+        200: '#C1D3E7',
+        300: '#A2BDDB',
+        400: '#5E8FBF',
+        500: '#1A5A96',
+        600: '#0F4C7A',
+        700: '#0A3859',
+        800: '#052438',
+        900: '#001A1F',
+      },
+      emerald: {
+        50: '#F0FDF4',
+        100: '#DCFCE7',
+        200: '#BBEF63',
+        300: '#86EFAC',
+        400: '#4ADE80',
+        500: '#10B981',
+        600: '#059669',
+        700: '#047857',
+        800: '#065F46',
+        900: '#064E3B',
+      },
     },
+    fontFamily: {
+      sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+    },
+    extend: {},
   },
   plugins: [],
 }

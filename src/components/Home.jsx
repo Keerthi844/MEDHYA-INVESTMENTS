@@ -8,12 +8,12 @@ import { motion } from 'framer-motion'
 function Hero() {
     const navigate = useNavigate()
     return (
-        <section className="py-16 bg-sky-100 text-gray-900 relative overflow-hidden">
+        <section className="py-16 bg-gradient-to-br from-navy-600 to-navy-700 text-white relative overflow-hidden">
 
             {/* BACKGROUND */}
-            <div className="absolute top-0 left-0 w-full h-1/2 bg-sky-50 -z-10"></div>
-            <div className="absolute -top-32 -left-32 w-96 h-96 bg-sky-200/40 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-sky-500/40 rounded-full blur-3xl"></div>
+            <div className="absolute top-0 left-0 w-full h-1/2 bg-navy-700 -z-10"></div>
+            <div className="absolute -top-32 -left-32 w-96 h-96 bg-navy-500/30 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-navy-800/30 rounded-full blur-3xl"></div>
 
             {/* MAIN GRID */}
             <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
@@ -31,10 +31,10 @@ function Hero() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="inline-flex items-center gap-2 border border-sky-300 px-4 py-2 rounded-full mb-6 bg-white shadow-sm"
+                        className="inline-flex items-center gap-2 border border-white px-4 py-2 rounded-full mb-6 bg-white/20 shadow-sm"
                     >
-                        <span className="w-2 h-2 bg-sky-500 rounded-full"></span>
-                        <span className="text-sky-600 text-sm font-bold">
+                        <span className="w-2 h-2 bg-white rounded-full"></span>
+                        <span className="text-white text-sm font-bold">
                             Investment Advisory
                         </span>
                     </motion.div>
@@ -46,9 +46,9 @@ function Hero() {
                         transition={{ delay: 0.3 }}
                         className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight mb-6"
                     >
-                        <span className="text-gray-800">WHERE CAPITAL</span>
+                        <span className="text-white">WHERE CAPITAL</span>
                         <br />
-                        <span className="text-sky-600">MEETS CLARITY</span>
+                        <span className="text-white">MEETS CLARITY</span>
                     </motion.h1>
 
                     {/* TAGLINE */}
@@ -56,7 +56,7 @@ function Hero() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.5 }}
-                        className="text-sky-500 italic text-base sm:text-lg mb-4"
+                        className="text-white italic text-base sm:text-lg mb-4"
                     >
                         Empowering Wealth. Enabling Growth.
                     </motion.p>
@@ -66,7 +66,7 @@ function Hero() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.6 }}
-                        className="text-gray-600 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 mb-6 font-bold"
+                        className="text-white/90 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 mb-6 font-bold"
                     >
                         Medhya Investment Advisors delivers end-to-end financial solutions guiding startups through fund-raising and IPOs while empowering individuals with strategic wealth creation, tax efficiency, and financial independence.
                     </motion.p>
@@ -80,14 +80,14 @@ function Hero() {
                     >
                         <button
                             onClick={() => navigate('/contact')}
-                            className="bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-full font-semibold"
+                            className="bg-white hover:bg-gray-100 text-navy-600 px-6 py-3 rounded-full font-semibold"
                         >
                             I'm a Startup →
                         </button>
 
                         <button
                             onClick={() => navigate('/contact')}
-                            className="border border-sky-400 text-sky-600 px-6 py-3 rounded-full font-semibold"
+                            className="border border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10"
                         >
                             I'm an Investor
                         </button>
@@ -97,15 +97,15 @@ function Hero() {
 
 
                 {/* RIGHT CARD */}
-                <div className="bg-white border border-sky-100 rounded-2xl p-5 sm:p-6 shadow-md">
+                <div className="bg-white border border-navy-100 rounded-2xl p-5 sm:p-6 shadow-md">
 
-                    <h3 className="text-sky-700  font-bold tracking-wider mb-4">
+                    <h3 className="text-navy-700  font-bold tracking-wider mb-4">
                         STARTUP JOURNEY
                     </h3>
 
                     {/* LIFECYCLE */}
                     <div className="mb-6">
-                        <p className="text-sky-500  mb-3 font-bold">Lifecycle Stages</p>
+                        <p className="text-navy-600  mb-3 font-bold">Lifecycle Stages</p>
 
                         <div className="flex flex-wrap justify-center items-center gap-3">
 
@@ -120,8 +120,8 @@ function Hero() {
                                             transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.2 }}
                                             className={`w-10 h-10 flex items-center justify-center rounded-full border
             ${num === 1 || num === 5
-                                                    ? 'bg-sky-500 text-white'
-                                                    : 'border-sky-400 text-sky-600'
+                                                    ? 'bg-navy-600 text-white'
+                                                    : 'border-navy-300 text-navy-600'
                                                 }`}
                                         >
                                             {num}
@@ -135,7 +135,7 @@ function Hero() {
                                     {/* ARROW */}
                                     {i !== 4 && (
                                         <motion.span
-                                            className="text-sky-400 text-lg hidden sm:inline"
+                                            className="text-navy-400 text-lg hidden sm:inline"
                                             animate={{ x: [0, 5, 0] }}
                                             transition={{ duration: 1, repeat: Infinity }}
                                         >
@@ -150,7 +150,7 @@ function Hero() {
                     </div>
                     {/* FUNDING */}
                     <div>
-                        <p className="text-sky-500  mb-3 font-bold">Funding Stages</p>
+                        <p className="text-navy-600  mb-3 font-bold">Funding Stages</p>
 
                         <div className="flex flex-wrap justify-center items-center gap-2 font-semibold">
 
@@ -165,8 +165,8 @@ function Hero() {
                                             transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.2 }}
                                             className={`w-10 h-10 flex items-center justify-center rounded-full border
             ${i === 4
-                                                    ? 'bg-sky-500 text-white'
-                                                    : 'border-sky-400 text-sky-600'
+                                                    ? 'bg-navy-600 text-white'
+                                                    : 'border-navy-300 text-navy-600'
                                                 }`}
                                         >
                                             ₹
@@ -180,7 +180,7 @@ function Hero() {
                                     {/* ARROW */}
                                     {i !== 4 && (
                                         <motion.span
-                                            className="text-sky-400 text-lg hidden sm:inline"
+                                            className="text-navy-200 text-lg hidden sm:inline"
                                             animate={{ x: [0, 5, 0] }}
                                             transition={{ duration: 1, repeat: Infinity }}
                                         >
@@ -193,8 +193,8 @@ function Hero() {
 
                         </div>
                     </div><div className="flex justify-between items-center mt-6 ">
-                        <span className="text-sky-700 font-bold">From idea to IPO</span>
-                        <span className="text-sky-700 font-bold">
+                        <span className="text-navy-600 font-bold">From idea to IPO</span>
+                        <span className="text-navy-600 font-bold">
                             End-to-End Support
                         </span>
                     </div>
@@ -224,13 +224,13 @@ function Credibility() {
         <section className="py-16 bg-white relative overflow-hidden">
 
             {/* SAME HERO BACKGROUND STYLE */}
-            <div className="absolute top-0 left-0 w-full h-1/2 bg-sky-150 -z-10"></div>
-            <div className="absolute -top-20 -left-20 w-72 h-72 bg-sky-200/40 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-sky-300/40 rounded-full blur-3xl"></div>
+            <div className="absolute top-0 left-0 w-full h-1/2 bg-navy-100 -z-10"></div>
+            <div className="absolute -top-20 -left-20 w-72 h-72 bg-navy-200/30 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-navy-300/30 rounded-full blur-3xl"></div>
 
             {/* HEADING */}
             <div className="text-center mb-12">
-                <h2 className="text-xl md:text-xl font-bold text-sky-600 mb-2">
+                <h2 className="text-xl md:text-xl font-bold text-navy-600 mb-2">
                     BUILT BY EXPERTS WHO UNDERSTAND FINANCE END-TO-END
                 </h2>
 
@@ -242,7 +242,7 @@ function Credibility() {
                 {tags.map((tag, i) => (
                     <span
                         key={i}
-                        className="px-5 py-2 rounded-full border border-sky-300 text-black bg-white shadow-sm hover:bg-sky-200 transition text-sm font-medium"
+                        className="px-5 py-2 rounded-full border border-navy-300 text-black bg-white shadow-sm hover:bg-emerald-100 hover:border-emerald-300 transition text-sm font-medium"
                     >
                         {tag}
                     </span>
@@ -252,36 +252,36 @@ function Credibility() {
             {/* MOBILE (LIKE IMAGE) */}
             <div className="md:hidden flex flex-col items-center gap-5">
 
-                <span className="px-6 py-2 rounded-full border border-sky-300 text-black bg-white text-center w-full max-w-xs shadow-sm">
+                <span className="px-6 py-2 rounded-full border border-navy-300 text-black bg-white text-center w-full max-w-xs shadow-sm">
                     Chartered Accountants
                 </span>
 
-                <span className="px-6 py-2 rounded-full border border-sky-300 text-black bg-white text-center w-full max-w-xs shadow-sm">
+                <span className="px-6 py-2 rounded-full border border-navy-300 text-black bg-white text-center w-full max-w-xs shadow-sm">
                     Company Secretaries
                 </span>
 
-                <span className="px-6 py-2 rounded-full border border-sky-300 text-black bg-white text-center w-full max-w-xs shadow-sm">
+                <span className="px-6 py-2 rounded-full border border-navy-300 text-black bg-white text-center w-full max-w-xs shadow-sm">
                     Certified Public Accountants
                 </span>
 
                 <div className="flex gap-4 justify-center w-full">
-                    <span className="px-5 py-2 rounded-full border border-sky-300 text-black bg-white text-center flex-1 max-w-[140px] shadow-sm">
+                    <span className="px-5 py-2 rounded-full border border-navy-300 text-black bg-white text-center flex-1 max-w-[140px] shadow-sm">
                         Banking
                     </span>
-                    <span className="px-5 py-2 rounded-full border border-sky-300 text-black bg-white text-center flex-1 max-w-[140px] shadow-sm">
+                    <span className="px-5 py-2 rounded-full border border-navy-300 text-black bg-white text-center flex-1 max-w-[140px] shadow-sm">
                         Management
                     </span>
                 </div>
 
                 <div className="flex gap-4 justify-center w-full">
-                    <span className="px-5 py-2 rounded-full border border-sky-300 text-black bg-white text-center flex-1 max-w-[140px] shadow-sm">
+                    <span className="px-5 py-2 rounded-full border border-navy-300 text-black bg-white text-center flex-1 max-w-[140px] shadow-sm">
                         Legal
                     </span>
-                    <span className="px-5 py-2 rounded-full border border-sky-300 text-black bg-white text-center flex-1 max-w-[140px] shadow-sm">
+                    <span className="px-5 py-2 rounded-full border border-navy-300 text-black bg-white text-center flex-1 max-w-[140px] shadow-sm">
                         CPAs
                     </span>
                 </div>
-                <span className="px-5 py-2 rounded-full border border-sky-300 text-black bg-white text-center max-w-[140px] shadow-sm">
+                <span className="px-5 py-2 rounded-full border border-navy-300 text-black bg-white text-center max-w-[140px] shadow-sm">
                     Ex-Bankers
                 </span>
 
@@ -312,18 +312,17 @@ function WhatWeDo() {
         <section className="py-20 bg-white relative overflow-hidden">
 
             {/* BACKGROUND */}
-            <div className="absolute top-0 left-0 w-full h-1/2 bg-sky-50 -z-10"></div>
-            <div className="absolute -top-20 -left-20 w-72 h-72 bg-sky-200/40 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-sky-300/40 rounded-full blur-3xl"></div>
+            <div className="absolute top-0 left-0 w-full h-1/2 bg-navy-50 -z-10"></div>
+            <div className="absolute -top-20 -left-20 w-72 h-72 bg-navy-200/30 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-navy-300/30 rounded-full blur-3xl"></div>
 
             <div className="max-w-7xl mx-auto px-4">
 
                 {/* HEADING */}
                 <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 text-center">
                     From Idea to Capital
-                    <span className="text-sky-600"> We Support the Entire Journey</span>
+                    <span className="text-navy-600"> We Support the Entire Journey</span>
                 </h2>
-
                 <p className="text-lg text-gray-600 mb-12 text-center">
                     End-to-end strategic support for startups and investors
                 </p>
@@ -346,12 +345,12 @@ function WhatWeDo() {
                         >
 
                             {/* CARD */}
-                            <div className="bg-white border border-sky-100 rounded-2xl p-8 h-full shadow-md 
-    hover:bg-sky-100 hover:border-sky-600 hover:shadow-xl hover:-translate-y-2 
+                            <div className="bg-white border border-navy-100 rounded-2xl p-8 h-full shadow-md 
+    hover:bg-emerald-50 hover:border-emerald-300 hover:shadow-xl hover:-translate-y-2 
     transition-all duration-300">
 
                                 {/* TITLE */}
-                                <h3 className="text-2xl font-bold text-gray-900 mb-6 group-hover:text-sky-600 transition">
+                                <h3 className="text-2xl font-bold text-gray-900 mb-6 group-hover:text-emerald-600 transition">
                                     {card.title}
                                 </h3>
 
@@ -360,7 +359,7 @@ function WhatWeDo() {
                                     {card.items.map((item, i) => (
                                         <li key={i} className="flex gap-3 items-start">
 
-                                            <div className="w-5 h-5 rounded-full border border-sky-700 flex items-center justify-center text-sky-500">
+                                            <div className="w-5 h-5 rounded-full border border-navy-600 flex items-center justify-center text-navy-600 group-hover:border-emerald-600 group-hover:text-emerald-600 transition">
                                                 ✓
                                             </div>
 
@@ -381,7 +380,7 @@ function WhatWeDo() {
 
                                         navigate(`/services?tab=${tab}`)
                                     }}
-                                    className="mt-auto bg-sky-500 hover:bg-sky-600 text-white px-6 py-3 rounded-lg font-semibold transition transform hover:scale-105 shadow-md"
+                                    className="mt-auto bg-navy-700 hover:bg-navy-800 text-white px-6 py-3 rounded-lg font-semibold transition transform hover:scale-105 shadow-md"
                                 >
                                     Explore Services →
                                 </button>
@@ -421,10 +420,10 @@ function ValueProposition() {
     return (
         <section className="py-20 bg-white relative overflow-hidden">
 
-            {/* SKY BACKGROUND */}
-            <div className="absolute top-0 left-0 w-full h-1/2 bg-sky-50 -z-10"></div>
-            <div className="absolute -top-20 -left-20 w-72 h-72 bg-sky-200/40 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-sky-300/40 rounded-full blur-3xl"></div>
+            {/* BACKGROUND */}
+            <div className="absolute top-0 left-0 w-full h-1/2 bg-navy-50 -z-10"></div>
+            <div className="absolute -top-20 -left-20 w-72 h-72 bg-navy-200/30 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-navy-300/30 rounded-full blur-3xl"></div>
 
             <div className="max-w-7xl mx-auto px-4 text-center">
 
@@ -440,7 +439,7 @@ function ValueProposition() {
                             We Don't Just Advise
                         </span>
                         <br />
-                        <span className="text-sky-600">
+                        <span className="text-navy-700">
                             We Make Businesses Investable
                         </span>
                     </h2>
@@ -463,26 +462,29 @@ function ValueProposition() {
                             className="group"
                         >
 
-                            <div className="bg-white border border-sky-100 rounded-2xl p-10 
+                            <div className="bg-white border border-navy-100 rounded-2xl p-10 
                                 shadow-md hover:shadow-xl hover:-translate-y-2 
-                                hover:border-sky-400 hover:bg-sky-50 transition-all duration-300">
+                                hover:border-navy-400 hover:bg-navy-50 transition-all duration-300">
 
                                 {/* ICON */}
                                 <div className="w-16 h-16 mx-auto mb-6 flex items-center justify-center 
-                                    rounded-full bg-sky-100 text-sky-600 text-2xl 
-                                    group-hover:bg-sky-500 group-hover:text-white transition">
+                                    rounded-full bg-navy-100 text-navy-700 text-3xl font-bold
+                                    group-hover:bg-navy-700 group-hover:text-white transition">
+
                                     {feature.icon}
                                 </div>
 
                                 {/* TITLE */}
-                                <h3 className="text-xl font-semibold mb-2 text-gray-800 group-hover:text-sky-600 transition">
+                                <h3 className="text-xl font-semibold mb-2 text-gray-800 
+                                    group-hover:text-navy-700 transition">
                                     {feature.title}
                                 </h3>
 
                                 {/* STEP */}
-                                <p className="text-gray-500">
+                                <p className="text-gray-500 group-hover:text-gray-700">
                                     {feature.step}
                                 </p>
+
                             </div>
 
                         </motion.div>
@@ -507,11 +509,6 @@ function HowItWorks() {
     return (
         <section className="py-20 bg-white relative overflow-hidden">
 
-            {/* SKY BACKGROUND */}
-            <div className="absolute top-0 left-0 w-full h-1/2 bg-sky-50 -z-10"></div>
-            <div className="absolute -top-20 -left-20 w-72 h-72 bg-sky-200/40 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-sky-300/40 rounded-full blur-3xl"></div>
-
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* HEADING */}
@@ -522,7 +519,7 @@ function HowItWorks() {
                 <div className="relative">
 
                     {/* LINE */}
-                    <div className="hidden md:block absolute top-8 left-[10%] right-[10%] h-[2px] bg-sky-300 z-0"></div>
+                    <div className="hidden md:block absolute top-8 left-[10%] right-[10%] h-[2px] bg-gray-300 z-0"></div>
 
                     {/* STEPS */}
                     <div className="grid md:grid-cols-5 gap-6 relative z-10">
@@ -537,15 +534,15 @@ function HowItWorks() {
                                 className="flex flex-col items-center text-center group"
                             >
 
-                                {/* BLINKING CIRCLE */}
+                                {/* NAVY CIRCLE */}
                                 <motion.div
-                                    className="bg-sky-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4"
+                                    className="bg-navy-700 text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mb-4"
                                     animate={{
                                         scale: [1, 1.1, 1],
                                         boxShadow: [
-                                            "0 0 0px rgba(14,165,233,0.4)",
-                                            "0 0 20px rgba(14,165,233,0.7)",
-                                            "0 0 0px rgba(14,165,233,0.4)"
+                                            "0 0 0px rgba(30,64,175,0.4)",
+                                            "0 0 20px rgba(30,64,175,0.7)",
+                                            "0 0 0px rgba(30,64,175,0.4)"
                                         ]
                                     }}
                                     transition={{
@@ -559,7 +556,7 @@ function HowItWorks() {
                                 </motion.div>
 
                                 {/* TITLE */}
-                                <h3 className="font-bold text-gray-900 mb-2 group-hover:text-sky-600 transition">
+                                <h3 className="font-bold text-gray-900 mb-2 group-hover:text-navy-700 transition">
                                     {step.title}
                                 </h3>
 
@@ -617,51 +614,43 @@ function Metrics() {
     }
 
     return (
-        <section className="py-10 bg-sky-100 relative overflow-hidden">
+       <section className="py-16 bg-white relative">
 
-            {/* SKY BACKGROUND */}
-            <div className="absolute top-0 left-0 w-full h-1/2 bg-sky-50 -z-10"></div>
-            <div className="absolute -top-20 -left-20 w-72 h-72 bg-sky-200/40 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-sky-300/40 rounded-full blur-3xl"></div>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* GRID */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
 
+            {metrics.map((metric, i) => (
+                <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                    viewport={{ once: true }}
+                    className="p-8 rounded-2xl 
+                    bg-navy-700 text-white 
+                    shadow-xl hover:shadow-2xl 
+                    hover:-translate-y-2 transition-all duration-300"
+                >
 
-                {/* GRID */}
-                <div className="grid grid-cols-2 md:grid-cols-4 text-center">
+                    {/* NUMBER */}
+                    <h3 className="text-4xl md:text-5xl font-bold mb-2">
+                        <Counter end={metric.number} suffix={metric.suffix} />
+                    </h3>
 
-                    {metrics.map((metric, i) => (
-                        <motion.div
-                            key={i}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: i * 0.1 }}
-                            viewport={{ once: true }}
-                            className="py-6 relative"
-                        >
+                    {/* LABEL */}
+                    <p className="text-white/80 text-sm md:text-base">
+                        {metric.label}
+                    </p>
 
-                            {/* DIVIDER */}
-                            {i !== metrics.length - 1 && (
-                                <div className="hidden md:block absolute top-1/2 right-0 transform -translate-y-1/2 h-12 w-[1px] bg-sky-200"></div>
-                            )}
+                </motion.div>
+            ))}
 
-                            {/* NUMBER */}
-                            <h3 className="text-4xl md:text-5xl font-bold text-sky-600 mb-2">
-                                <Counter end={metric.number} suffix={metric.suffix} />
-                            </h3>
+        </div>
 
-                            {/* LABEL */}
-                            <p className="text-gray-600 text-sm md:text-base">
-                                {metric.label}
-                            </p>
-
-                        </motion.div>
-                    ))}
-
-                </div>
-
-            </div>
-        </section>
+    </div>
+</section>
     );
 }
 
@@ -706,9 +695,9 @@ function ServiceSnapshot() {
         <section className="py-20 bg-white relative overflow-hidden">
 
             {/* SKY BACKGROUND */}
-            <div className="absolute top-0 left-0 w-full h-1/2 bg-sky-50 -z-10"></div>
-            <div className="absolute -top-20 -left-20 w-72 h-72 bg-sky-200/40 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-sky-300/40 rounded-full blur-3xl"></div>
+            <div className="absolute top-0 left-0 w-full h-1/2 bg-navy-50 -z-10"></div>
+            <div className="absolute -top-20 -left-20 w-72 h-72 bg-navy-200/30 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-navy-300/30 rounded-full blur-3xl"></div>
 
             <div className="max-w-7xl mx-auto px-4">
 
@@ -735,20 +724,20 @@ function ServiceSnapshot() {
                             className="group"
                         >
 
-                            <div className="bg-white border border-sky-100 rounded-2xl p-8 
-                                shadow-md hover:shadow-xl hover:-translate-y-2 
-                                hover:bg-sky-50 hover:border-sky-400 transition-all duration-300">
+                            <div className="bg-white border border-navy-100 rounded-2xl p-8 
+                shadow-md hover:shadow-xl hover:-translate-y-2 
+                hover:bg-navy-50 hover:border-navy-400 transition-all duration-300">
 
                                 {/* ICON */}
-                                <div className="w-12 h-12 rounded-xl bg-sky-100 text-sky-600 
-                                    flex items-center justify-center mb-6 text-xl
-                                    group-hover:bg-sky-500 group-hover:text-white transition">
+                                <div className="w-12 h-12 rounded-xl bg-navy-100 text-navy-700 
+                    flex items-center justify-center mb-6 text-xl
+                    group-hover:bg-navy-700 group-hover:text-white transition">
                                     {service.icon}
                                 </div>
 
                                 {/* TITLE */}
                                 <h3 className="text-lg font-semibold text-gray-900 mb-3 
-                                    group-hover:text-sky-600 transition">
+                    group-hover:text-navy-700 transition">
                                     {service.title}
                                 </h3>
 
@@ -768,13 +757,14 @@ function ServiceSnapshot() {
                 <div className="text-center mt-12">
                     <button
                         onClick={() => navigate('/services')}
-                        className="border border-sky-500 text-sky-600 px-6 py-3 rounded-full 
-        hover:bg-sky-500 hover:text-white transition font-semibold"
+                        className="border border-navy-600 text-navy-700 px-6 py-3 rounded-full 
+        hover:bg-navy-700 hover:text-white transition font-semibold"
                     >
                         View All Services →
                     </button>
                 </div>
 
+                
             </div>
         </section>
     )
@@ -784,51 +774,52 @@ function CTABlock() {
     const navigate = useNavigate()
 
     return (
-        <section className="py-16 bg-white relative overflow-hidden">
+    <section className="py-28 bg-white relative">
 
-            {/* SKY BACKGROUND */}
-            <div className="absolute top-0 left-0 w-full h-full bg-sky-50 -z-10"></div>
-            <div className="absolute -top-20 -left-20 w-72 h-72 bg-sky-200/40 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-sky-300/40 rounded-full blur-3xl"></div>
+    <motion.div
+        className="max-w-5xl mx-auto px-10 py-16 rounded-3xl 
+        border-2 border-navy-300 bg-navy-50 
+        shadow-xl hover:shadow-2xl 
+        hover:-translate-y-2 hover:scale-[1.01]
+        transition-all duration-300 text-center"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+    >
 
-            <motion.div
-                className="max-w-5xl mx-auto px-6 py-12 rounded-3xl border border-sky-100 bg-white shadow-lg text-center"
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+        {/* HEADING */}
+        <h2 className="text-3xl md:text-4xl font-bold text-navy-700 mb-6">
+            Raising Capital or Looking to Invest?
+        </h2>
+
+        <p className="text-gray-600 mb-10 text-lg">
+            Let's build something meaningful together.
+        </p>
+
+        {/* BUTTONS */}
+        <div className="flex flex-col sm:flex-row justify-center gap-6">
+
+            <button
+                onClick={() => navigate('/contact')}
+                className="bg-navy-700 hover:bg-navy-800 text-white px-10 py-4 rounded-full 
+                font-semibold transition shadow-md hover:shadow-lg"
             >
+                Submit Your Startup
+            </button>
 
-                {/* HEADING */}
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                    Raising Capital or Looking to Invest?
-                </h2>
+            <button
+                onClick={() => navigate('/contact')}
+                className="border-2 border-navy-400 text-navy-700 px-10 py-4 rounded-full 
+                font-semibold transition hover:bg-navy-100"
+            >
+                Join Investor Network
+            </button>
 
-                <p className="text-gray-600 mb-8 text-lg">
-                    Let's build something meaningful together.
-                </p>
+        </div>
 
-                {/* BUTTONS */}
-                <div className="flex flex-col sm:flex-row justify-center gap-4">
-
-                    <button
-                        onClick={() => navigate('/contact')}
-                        className="bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-full font-semibold transition shadow-md hover:shadow-lg"
-                    >
-                        Submit Your Startup
-                    </button>
-
-                    <button
-                        onClick={() => navigate('/contact')}
-                        className="border border-sky-400 text-sky-600 px-8 py-4 rounded-full font-semibold transition hover:bg-sky-50"
-                    >
-                        Join Investor Network
-                    </button>
-
-                </div>
-
-            </motion.div>
-        </section>
+    </motion.div>
+</section>
     )
 }
 

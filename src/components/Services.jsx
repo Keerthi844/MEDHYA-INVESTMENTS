@@ -19,15 +19,15 @@ export default function Services() {
       {/* ===== HEADER ===== */}
       <section className="pt-28 pb-20 bg-white relative overflow-hidden">
         {/* SKY BACKGROUND */}
-        <div className="absolute top-0 left-0 w-full h-[260px] bg-gradient-to-r from-sky-200 via-sky-300 to-sky-400 z-0"></div>
-        <div className="absolute -top-20 -left-20 w-72 h-72 bg-sky-200/40 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-sky-300/40 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-full h-[260px] bg-gradient-to-r from-navy-700 via-navy-700 to-navy-700 z-0"></div>
+        <div className="absolute -top-20 -left-20 w-72 h-72 bg-navy-200/30 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-navy-300/30 rounded-full blur-3xl"></div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Our <span className="text-sky-600">Services</span>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Our <span className="text-emerald-300">Services</span>
           </h1>
-          <p className="text-gray-600 mt-3 max-w-xl mx-auto">
+          <p className="text-white/90 mt-3 max-w-xl mx-auto">
             Comprehensive financial advisory tailored for every stage of the investment lifecycle.
           </p>
         </div>
@@ -36,13 +36,13 @@ export default function Services() {
       {/* ===== TABS ===== */}
       <section className="py-8 text-center bg-white">
         <div className="max-w-5xl mx-auto px-4">
-          <div className="inline-flex border border-sky-200 rounded-full overflow-hidden">
+          <div className="inline-flex border border-navy-200 rounded-full overflow-hidden">
           <button
             onClick={() => setActiveTab("startups")}
             className={`px-6 py-2 font-semibold transition ${
               activeTab === "startups"
-                ? "bg-sky-600 text-white"
-                : "text-sky-600 hover:bg-sky-50"
+                ? "bg-navy-600 text-white"
+                : "text-emerald-600 hover:bg-navy-100"
             }`}
           >
             For Startups
@@ -52,8 +52,8 @@ export default function Services() {
             onClick={() => setActiveTab("investor")}
             className={`px-6 py-2 font-semibold transition ${
               activeTab === "investor"
-                ? "bg-sky-600 text-white"
-                : "text-sky-600 hover:bg-sky-50"
+                ? "bg-navy-600 text-white"
+                : "text-navy-600 hover:bg-navy-100"
             }`}
           >
             For Investors
@@ -133,18 +133,18 @@ export default function Services() {
             ].map((card, i) => (
               <div
                 key={i}
-                className="bg-white border border-sky-100 rounded-2xl p-6 shadow-md 
-                hover:shadow-xl hover:-translate-y-2 hover:bg-sky-100 
+                className="bg-white border border-navy-100 rounded-2xl p-6 shadow-md 
+                hover:shadow-xl hover:-translate-y-2 hover:bg-emerald-50 hover:border-emerald-300
                 transition-all duration-300"
               >
-                <h3 className="text-lg font-bold text-sky-900 mb-4">
+                <h3 className="text-lg font-bold text-navy-900 mb-4">
                   {card.title}
                 </h3>
 
                 <ul className="space-y-3">
                   {card.points.map((point, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-gray-600 text-sm">
-                      <span className="text-sky-500">✔</span>
+                      <span className="text-emerald-500">✔</span>
                       {point}
                     </li>
                   ))}
@@ -203,8 +203,8 @@ export default function Services() {
             ].map((card, i) => (
               <div
                 key={i}
-                className="bg-white border border-sky-100 rounded-2xl p-6 shadow-md 
-                hover:shadow-xl hover:-translate-y-2 hover:bg-sky-100 
+                className="bg-white border border-navy-100 rounded-2xl p-6 shadow-md 
+                hover:shadow-xl hover:-translate-y-2 hover:bg-emerald-50 hover:border-emerald-300
                 transition-all duration-300"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">
@@ -214,7 +214,7 @@ export default function Services() {
                 <ul className="space-y-3">
                   {card.points.map((point, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-gray-600 text-sm">
-                      <span className="text-sky-500">✔</span>
+                      <span className="text-emerald-500">✔</span>
                       {point}
                     </li>
                   ))}

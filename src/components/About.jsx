@@ -45,24 +45,24 @@ function AboutSection() {
 
       {/* SKY BACKGROUND (NO GAP + 260 HEIGHT) */}
       <div className="absolute top-0 left-0 w-full h-[260px] 
-        bg-gradient-to-r from-sky-200 via-sky-300 to-sky-400 z-0">
+        bg-gradient-to-r from-navy-700 via-navy-700 to-navy-700 z-0">
       </div>
 
       {/* FLOATING SHAPES */}
-      <div className="absolute -top-20 -left-20 w-72 h-72 bg-sky-200/40 rounded-full blur-3xl"></div>
-      <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-sky-300/40 rounded-full blur-3xl"></div>
+      <div className="absolute -top-20 -left-20 w-72 h-72 bg-navy-200/30 rounded-full blur-3xl"></div>
+      <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-navy-300/30 rounded-full blur-3xl"></div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4">
 
         {/* ✅ PERFECT CENTERED HERO */}
         <div className="h-[260px] flex flex-col justify-center items-center text-center px-6 space-y-4">
 
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-            About <span className="text-sky-600">Medhya</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+            About <span className="text-emerald-300">Medhya</span>
           </h2>
 
-          <p className="text-gray-700 max-w-2xl">
-            Medhya Investment Advisors delivers end-to-end financial solutions 
+          <p className="text-white/90 max-w-2xl">
+            Medhya Investment Advisors delivers end-to-end financial solutions
             from startup fundraising to individual wealth creation, guided by clarity and conviction.
           </p>
 
@@ -81,12 +81,12 @@ function AboutSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white border border-sky-100 rounded-2xl p-6 shadow-md 
+                className="bg-white border border-navy-100 rounded-2xl p-6 shadow-md 
                 hover:shadow-xl hover:-translate-y-2 
-                hover:bg-sky-100 hover:border-sky-400 transition-all duration-300 group"
+                hover:bg-navy-100 hover:border-emerald-300 transition-all duration-300 group"
               >
-                <span className="text-xs px-3 py-1 rounded-full bg-sky-100 text-sky-600 font-semibold
-                group-hover:bg-sky-500 group-hover:text-white transition">
+                <span className="text-xs px-3 py-1 rounded-full bg-navy-100 text-emerald-600 font-semibold
+                group-hover:bg-emerald-500 group-hover:text-white transition">
                   {item.title}
                 </span>
 
@@ -99,102 +99,102 @@ function AboutSection() {
           </div>
 
           {/* TEAM BACKGROUND */}
-        <motion.div
-  className="bg-white border border-sky-100 rounded-2xl p-6 shadow-md mb-10"
-  initial={{ opacity: 0, y: 30 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.5 }}
-  viewport={{ once: true }}
->
+          <motion.div
+            className="bg-white border border-navy-100 rounded-2xl p-6 shadow-md mb-10"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
 
-  <h2 className="text-2xl font-bold text-center mb-6">
-    Team <span className="text-sky-600">Background</span>
-  </h2>
+            <h2 className="text-2xl font-bold text-center mb-6">
+              Team <span className="text-navy-700">Background</span>
+            </h2>
 
-  {/* DESKTOP */}
-  <div className="hidden md:flex flex-wrap justify-center gap-3">
-    {tags.map((tag, i) => (
-      <span
-        key={i}
-        className="px-4 py-2 text-sm border border-sky-300 text-black rounded-full hover:bg-sky-300 transition"
-      >
-        {tag}
-      </span>
-    ))}
-  </div>
+            {/* DESKTOP */}
+            <div className="hidden md:flex flex-wrap justify-center gap-3">
+              {tags.map((tag, i) => (
+                <span
+                  key={i}
+                  className="px-4 py-2 text-sm border border-navy-300 text-black rounded-full hover:bg-emerald-100 hover:border-emerald-300 transition"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
 
-  {/* MOBILE (EXACT IMAGE LAYOUT) */}
-  <div className="md:hidden flex flex-col items-center gap-4">
+            {/* MOBILE (EXACT IMAGE LAYOUT) */}
+            <div className="md:hidden flex flex-col items-center gap-4">
 
-    <span className="px-4 py-2 text-sm border border-sky-300 text-black rounded-full text-center w-full max-w-xs">
-      Chartered Accountants
-    </span>
+              <span className="px-4 py-2 text-sm border border-navy-300 text-black rounded-full text-center w-full max-w-xs">
+                Chartered Accountants
+              </span>
 
-    <span className="px-4 py-2 text-sm border border-sky-300 text-black rounded-full text-center w-full max-w-xs">
-      Company Secretaries
-    </span>
+              <span className="px-4 py-2 text-sm border border-navy-300 text-black rounded-full text-center w-full max-w-xs">
+                Company Secretaries
+              </span>
 
-    <div className="flex gap-3 justify-center w-full">
-      <span className="px-4 py-2 text-sm border border-sky-300 text-black rounded-full text-center flex-1 max-w-[140px]">
-        CPAs
-      </span>
-      <span className="px-4 py-2 text-sm border border-sky-300 text-black rounded-full text-center flex-1 max-w-[140px]">
-        Ex-Bankers
-      </span>
-    </div>
+              <div className="flex gap-3 justify-center w-full">
+                <span className="px-4 py-2 text-sm border border-navy-300 text-black rounded-full text-center flex-1 max-w-[140px]">
+                  CPAs
+                </span>
+                <span className="px-4 py-2 text-sm border border-navy-300 text-black rounded-full text-center flex-1 max-w-[140px]">
+                  Ex-Bankers
+                </span>
+              </div>
 
-    <span className="px-4 py-2 text-sm border border-sky-300 text-black rounded-full text-center w-full max-w-xs">
-      Management Graduates
-    </span>
+              <span className="px-4 py-2 text-sm border border-navy-300 text-black rounded-full text-center w-full max-w-xs">
+                Management Graduates
+              </span>
 
-    <span className="px-4 py-2 text-sm border border-sky-300 text-black rounded-full text-center w-full max-w-xs">
-      Legal Experts
-    </span>
+              <span className="px-4 py-2 text-sm border border-navy-300 text-black rounded-full text-center w-full max-w-xs">
+                Legal Experts
+              </span>
 
-  </div>
+            </div>
 
-</motion.div>
+          </motion.div>
 
           {/* TEAM */}
           <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-            The <span className="text-sky-600">Team</span>
+            The <span className="text-navy-700">Team</span>
           </h2>
 
-         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
 
-  {team.map((member, i) => (
-    <motion.div
-      key={i}
-      initial={{ opacity: 0, scale: 0.9 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.4, delay: i * 0.1 }}
-      viewport={{ once: true }}
-      className="bg-white border border-sky-100 rounded-2xl p-6 text-center 
+            {team.map((member, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white border border-navy-100 rounded-2xl p-6 text-center 
       shadow-md hover:shadow-xl hover:-translate-y-2 transition w-full max-w-[220px] mx-auto"
-    >
+              >
 
-      {/* CIRCLE */}
-      <div className="w-16 h-16 mx-auto mb-4 rounded-full 
-      flex items-center justify-center text-sky-600 font-bold text-lg
-      border-2 border-sky-300 bg-sky-50
-      hover:bg-sky-500 hover:text-white transition">
-        {member.initials}
-      </div>
+                {/* CIRCLE */}
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full 
+      flex items-center justify-center text-emerald-600 font-bold text-lg
+      border-2 border-navy-300 bg-navy-50
+      hover:bg-navy-500 hover:text-white transition">
+                  {member.initials}
+                </div>
 
-      {/* NAME */}
-      <h4 className="text-sm font-semibold text-gray-900 leading-tight">
-        {member.name}
-      </h4>
+                {/* NAME */}
+                <h4 className="text-sm font-semibold text-gray-900 leading-tight">
+                  {member.name}
+                </h4>
 
-      {/* ROLE */}
-      <p className="text-xs text-gray-500 mt-1">
-        {member.role}
-      </p>
+                {/* ROLE */}
+                <p className="text-xs text-gray-500 mt-1">
+                  {member.role}
+                </p>
 
-    </motion.div>
-  ))}
+              </motion.div>
+            ))}
 
-</div>
+          </div>
 
         </div>
 
