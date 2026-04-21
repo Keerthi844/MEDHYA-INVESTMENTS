@@ -58,7 +58,7 @@ function AboutSection() {
         <div className="h-[260px] flex flex-col justify-center items-center text-center px-6 space-y-4">
 
           <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-            About <span className="text-emerald-300">Medhya</span>
+            About <span className="text-white-300">Medhya</span>
           </h2>
 
           <p className="text-white/90 max-w-2xl">
@@ -83,10 +83,10 @@ function AboutSection() {
                 viewport={{ once: true }}
                 className="bg-white border border-navy-100 rounded-2xl p-6 shadow-md 
                 hover:shadow-xl hover:-translate-y-2 
-                hover:bg-navy-100 hover:border-emerald-300 transition-all duration-300 group"
+                hover:bg-navy-100 hover:border-white-300 transition-all duration-300 group"
               >
-                <span className="text-xs px-3 py-1 rounded-full bg-navy-100 text-emerald-600 font-semibold
-                group-hover:bg-emerald-500 group-hover:text-white transition">
+                <span className="text-xs px-3 py-1 rounded-full bg-navy-100 text-white-600 font-semibold
+                group-hover:bg-white-500 group-hover:text-white transition">
                   {item.title}
                 </span>
 
@@ -116,7 +116,7 @@ function AboutSection() {
               {tags.map((tag, i) => (
                 <span
                   key={i}
-                  className="px-4 py-2 text-sm border border-navy-300 text-black rounded-full hover:bg-emerald-100 hover:border-emerald-300 transition"
+                  className="px-4 py-2 text-sm border border-navy-300 text-black rounded-full hover:bg-white-100 hover:border-white-300 transition"
                 >
                   {tag}
                 </span>
@@ -175,7 +175,7 @@ function AboutSection() {
 
                 {/* CIRCLE */}
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full 
-      flex items-center justify-center text-emerald-600 font-bold text-lg
+      flex items-center justify-center text-white-600 font-bold text-lg
       border-2 border-navy-300 bg-navy-50
       hover:bg-navy-500 hover:text-white transition">
                   {member.initials}

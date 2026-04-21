@@ -45,7 +45,7 @@ function ContactSection() {
           <div className="space-y-4 mb-6">
 
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-navy-100 text-emerald-600 rounded-lg">
+              <div className="p-2 bg-navy-100 text-white-600 rounded-lg">
                 <FaEnvelope />
               </div>
               <div>
@@ -55,7 +55,7 @@ function ContactSection() {
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-navy-100 text-emerald-600 rounded-lg">
+              <div className="p-2 bg-navy-100 text-white-600 rounded-lg">
                 <FaPhone />
               </div>
               <div>
@@ -65,7 +65,7 @@ function ContactSection() {
             </div>
 
             <div className="flex items-center gap-3">
-              <div className="p-2 bg-navy-100 text-emerald-600 rounded-lg">
+              <div className="p-2 bg-navy-100 text-white-600 rounded-lg">
                 <FaMapMarkerAlt />
               </div>
               <div>
@@ -81,7 +81,7 @@ function ContactSection() {
             <p className="text-sm text-gray-600 italic">
               "Enduring value is designed not accidental. Every great company begins with the right financial foundation."
             </p>
-            <p className="text-emerald-600 text-xs mt-2 font-semibold">
+            <p className="text-white-600 text-xs mt-2 font-semibold">
               — Medhya Team
             </p>
           </div>
@@ -116,11 +116,11 @@ function ContactSection() {
             <p className="text-sm text-gray-700 mb-2">I am a</p>
             <div className="flex gap-6 text-sm">
               <label className="flex items-center gap-2">
-                <input type="radio" name="type" className="accent-emerald-600" />
+                <input type="radio" name="type" className="accent-white-600" />
                 Startup
               </label>
               <label className="flex items-center gap-2">
-                <input type="radio" name="type" className="accent-emerald-600" />
+                <input type="radio" name="type" className="accent-white-600" />
                 Investor
               </label>
             </div>
@@ -134,7 +134,7 @@ function ContactSection() {
           ></textarea>
 
           {/* BUTTON */}
-          <button className="w-full bg-emerald-500 hover:bg-emerald-600 text-balck py-3 rounded-full font-semibold transition shadow-md">
+          <button className="w-full bg-white-500 hover:bg-white-600 text-balck py-3 rounded-full font-semibold transition shadow-md">
             Send Message
           </button>
 
