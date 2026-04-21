@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import aboutBanner from "../assets/images/about banner.jpg"
 
 function AboutSection() {
 
@@ -44,9 +45,9 @@ function AboutSection() {
     <section className="pt-0 pb-20 bg-white relative overflow-hidden">
 
       {/* SKY BACKGROUND (NO GAP + 260 HEIGHT) */}
-      <div className="absolute top-0 left-0 w-full h-[260px] 
-        bg-gradient-to-r from-navy-700 via-navy-700 to-navy-700 z-0">
-      </div>
+<div className="absolute top-0 left-0 w-full h-[600px] 
+  bg-gradient-to-r from-navy-700 via-navy-700 to-navy-700 z-0">
+</div>
 
       {/* FLOATING SHAPES */}
       <div className="absolute -top-20 -left-20 w-72 h-72 bg-navy-200/30 rounded-full blur-3xl"></div>
@@ -55,19 +56,33 @@ function AboutSection() {
       <div className="relative z-10 max-w-5xl mx-auto px-4">
 
         {/* ✅ PERFECT CENTERED HERO */}
-        <div className="h-[260px] flex flex-col justify-center items-center text-center px-6 space-y-4">
+        <div className="relative w-full h-[600px] md:h-[600px] lg:h-[600px] overflow-hidden">
 
-          <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-            About <span className="text-white-300">Medhya</span>
-          </h2>
+          {/* IMAGE */}
+          <img
+            src={aboutBanner}
+            alt="About Medhya"
+            className="w-full h-full object-cover"
+          />
 
-          <p className="text-white/90 max-w-2xl">
-            Medhya Investment Advisors delivers end-to-end financial solutions
-            from startup fundraising to individual wealth creation, guided by clarity and conviction.
-          </p>
+          {/* OPTIONAL OVERLAY (light only) */}
+          <div className="absolute inset-0 bg-black/40"></div>
+
+          {/* CONTENT */}
+          <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
+
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
+              About <span className="text-white">Medhya</span>
+            </h2>
+
+            <p className="text-white/90 max-w-2xl">
+              Medhya Investment Advisors delivers end-to-end financial solutions
+              from startup fundraising to individual wealth creation, guided by clarity and conviction.
+            </p>
+
+          </div>
 
         </div>
-
         {/* WHITE CONTENT CARD */}
         <div className="px-4 py-10 mt-6">
 

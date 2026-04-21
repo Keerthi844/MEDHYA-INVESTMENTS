@@ -2,209 +2,174 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { FaLightbulb, FaBullseye, FaChartBar, FaChartLine, FaUserTie, FaShieldAlt, FaCheckCircle } from 'react-icons/fa'
 import { motion } from 'framer-motion'
+import homeBannerImage from '../assets/images/home banner.jpg'
 
 
 // Hero Section
 function Hero() {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
     return (
-        <section className="py-16 bg-gradient-to-br from-navy-600 to-navy-700 text-white relative overflow-hidden">
+        <section className="relative min-h-[100vh] w-full">
 
-            {/* BACKGROUND */}
-            <div className="absolute top-0 left-0 w-full h-1/2 bg-navy-700 -z-10"></div>
-            <div className="absolute -top-32 -left-32 w-96 h-96 bg-navy-500/30 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-navy-800/30 rounded-full blur-3xl"></div>
+            {/* IMAGE */}
+            <img
+                src={homeBannerImage}
+                alt="Banner"
+                className="absolute inset-0 w-full h-full object-cover"
+            />
 
-            {/* MAIN GRID */}
-            <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-center">
+            {/* OVERLAY */}
+            <div className="absolute inset-0 bg-black/60"></div>
 
-                {/* LEFT CONTENT */}
-                <motion.div
-                    initial={{ opacity: 0, x: -60 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="text-center lg:text-left"
-                >
+            {/* CONTENT */}
+            <div className="relative z-10 max-w-7xl mx-auto px-4 min-h-[100vh] flex flex-col justify-between py-10">
 
-                    {/* TAG */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 }}
-                        className="inline-flex items-center gap-2 border border-white px-4 py-2 rounded-full mb-6 bg-white/20 shadow-sm"
-                    >
+                {/* TOP TEXT */}
+                <div className="max-w-xl text-white">
+
+                    <div className="inline-flex items-center gap-2 border border-white px-4 py-2 rounded-full mb-6 bg-white/20">
                         <span className="w-2 h-2 bg-white rounded-full"></span>
-                        <span className="text-white text-sm font-bold">
-                            Investment Advisory
-                        </span>
-                    </motion.div>
+                        <span className="text-sm font-bold">Investment Advisory</span>
+                    </div>
 
-                    {/* HEADING */}
-                    <motion.h1
-                        initial={{ opacity: 0, y: 40 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.3 }}
-                        className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight mb-6"
-                    >
-                        <span className="text-white">WHERE CAPITAL</span>
-                        <br />
-                        <span className="text-white">MEETS CLARITY</span>
-                    </motion.h1>
+                    <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight mb-6">
+                        WHERE CAPITAL <br /> MEETS CLARITY
+                    </h1>
 
-                    {/* TAGLINE */}
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.5 }}
-                        className="text-white italic text-base sm:text-lg mb-4"
-                    >
+                    <p className="italic text-base sm:text-lg mb-4">
                         Empowering Wealth. Enabling Growth.
-                    </motion.p>
+                    </p>
 
-                    {/* DESCRIPTION */}
-                    <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.6 }}
-                        className="text-white/90 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 mb-6 font-bold"
-                    >
-                        Medhya Investment Advisors delivers end-to-end financial solutions guiding startups through fund-raising and IPOs while empowering individuals with strategic wealth creation, tax efficiency, and financial independence.
-                    </motion.p>
+                    <p className="text-sm sm:text-base mb-6 font-semibold text-white/90">
+                        Medhya Investment Advisors delivers end-to-end financial solutions guiding startups through fund-raising and IPOs while empowering individuals with strategic wealth creation.
+                    </p>
 
                     {/* BUTTONS */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.8 }}
-                        className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4"
-                    >
+                    <div className="flex flex-col sm:flex-row gap-4">
                         <button
                             onClick={() => navigate('/contact')}
-                            className="bg-white hover:bg-gray-100 text-navy-600 px-6 py-3 rounded-full font-semibold"
+                            className="bg-white text-navy-700 px-6 py-3 rounded-full font-semibold w-full sm:w-auto"
                         >
                             I'm a Startup →
                         </button>
 
                         <button
                             onClick={() => navigate('/contact')}
-                            className="border border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10"
+                            className="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 w-full sm:w-auto"
                         >
                             I'm an Investor
                         </button>
+                    </div>
+                </div>
+
+                {/* CARD */}
+                <div className="
+                    mt-10 
+                    w-full 
+                    max-w-2xl 
+                    mx-auto 
+                    lg:absolute lg:top-20 lg:right-6
+                ">
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 40 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className="bg-white rounded-3xl p-6 sm:p-8 shadow-2xl border border-navy-100"
+                    >
+
+                        <h3 className="text-navy-700 font-bold mb-6 text-lg">
+                            STARTUP JOURNEY
+                        </h3>
+
+                        {/* LIFECYCLE */}
+                        <div className="mb-6">
+                            <p className="text-navy-700 font-semibold mb-4">
+                                Lifecycle Stages
+                            </p>
+
+                            <div className="flex flex-wrap justify-between items-center text-center gap-2">
+
+                                {["1","2","3","4","5"].map((n,i)=>(
+                                    <React.Fragment key={i}>
+
+                                        <div className="flex flex-col items-center">
+                                            <div className={`w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full text-sm
+                                            ${i===0||i===4 ? "bg-navy-700 text-white" : "border border-navy-300 text-navy-700"}`}>
+                                                {n}
+                                            </div>
+
+                                            <p className="text-[10px] sm:text-xs mt-2 text-gray-700">
+                                                {["Ideation","Product","GTM","Scaling","Maturity"][i]}
+                                            </p>
+                                        </div>
+
+                                        {i !== 4 && (
+                                            <motion.span
+                                                className="text-navy-400 text-lg"
+                                                animate={{ x: [0, 5, 0] }}
+                                                transition={{ duration: 1, repeat: Infinity }}
+                                            >
+                                                →
+                                            </motion.span>
+                                        )}
+
+                                    </React.Fragment>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* FUNDING */}
+                        <div>
+                            <p className="text-navy-700 font-semibold mb-4">
+                                Funding Stages
+                            </p>
+
+                            <div className="flex flex-wrap justify-between items-center text-center gap-2">
+
+                                {["₹","₹","₹","₹","₹"].map((n,i)=>(
+                                    <React.Fragment key={i}>
+
+                                        <div className="flex flex-col items-center">
+                                            <div className={`w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full text-sm
+                                            ${i===4 ? "bg-navy-700 text-white" : "border border-navy-300 text-navy-700"}`}>
+                                                {n}
+                                            </div>
+
+                                            <p className="text-[10px] sm:text-xs mt-2 text-gray-700">
+                                                {["F&F","Seed","VC","Growth","IPO"][i]}
+                                            </p>
+                                        </div>
+
+                                        {i !== 4 && (
+                                            <motion.span
+                                                className="text-navy-300 text-lg"
+                                                animate={{ x: [0, 5, 0] }}
+                                                transition={{ duration: 1, repeat: Infinity }}
+                                            >
+                                                →
+                                            </motion.span>
+                                        )}
+
+                                    </React.Fragment>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* FOOTER */}
+                       <div className="flex justify-between items-center text-navy-700 font-semibold text-sm mt-6 px-2">
+    <span className="text-left">From idea to IPO</span>
+    <span className="text-right">End-to-End Support</span>
+</div>
+
                     </motion.div>
-
-                </motion.div>
-
-
-                {/* RIGHT CARD */}
-                <div className="bg-white border border-navy-100 rounded-2xl p-5 sm:p-6 shadow-md">
-
-                    <h3 className="text-navy-700  font-bold tracking-wider mb-4">
-                        STARTUP JOURNEY
-                    </h3>
-
-                    {/* LIFECYCLE */}
-                    <div className="mb-6">
-                        <p className="text-navy-600  mb-3 font-bold">Lifecycle Stages</p>
-
-                        <div className="flex flex-wrap justify-center items-center gap-3">
-
-                            {[1, 2, 3, 4, 5].map((num, i) => (
-                                <React.Fragment key={i}>
-
-                                    {/* STEP */}
-                                    <div className="flex flex-col items-center">
-
-                                        <motion.div
-                                            animate={{ scale: [1, 1.1, 1] }}
-                                            transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.2 }}
-                                            className={`w-10 h-10 flex items-center justify-center rounded-full border
-            ${num === 1 || num === 5
-                                                    ? 'bg-navy-600 text-white'
-                                                    : 'border-navy-300 text-navy-600'
-                                                }`}
-                                        >
-                                            {num}
-                                        </motion.div>
-
-                                        <p className="text-[10px] text-gray-600 mt-1 text-center font-bold">
-                                            {['Ideation', 'Product dev', 'Go-To-Market', 'Scaling', 'Maturity'][i]}
-                                        </p>
-                                    </div>
-
-                                    {/* ARROW */}
-                                    {i !== 4 && (
-                                        <motion.span
-                                            className="text-navy-400 text-lg hidden sm:inline"
-                                            animate={{ x: [0, 5, 0] }}
-                                            transition={{ duration: 1, repeat: Infinity }}
-                                        >
-                                            →
-                                        </motion.span>
-                                    )}
-
-                                </React.Fragment>
-                            ))}
-
-                        </div>
-                    </div>
-                    {/* FUNDING */}
-                    <div>
-                        <p className="text-navy-600  mb-3 font-bold">Funding Stages</p>
-
-                        <div className="flex flex-wrap justify-center items-center gap-2 font-semibold">
-
-                            {['Friends & Family', 'Seed Capital', 'Venture Funding', 'Growth', 'IPO'].map((label, i) => (
-                                <React.Fragment key={i}>
-
-                                    {/* STEP */}
-                                    <div className="flex flex-col items-center">
-
-                                        <motion.div
-                                            animate={{ scale: [1, 1.1, 1] }}
-                                            transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.2 }}
-                                            className={`w-10 h-10 flex items-center justify-center rounded-full border
-            ${i === 4
-                                                    ? 'bg-navy-600 text-white'
-                                                    : 'border-navy-300 text-navy-600'
-                                                }`}
-                                        >
-                                            ₹
-                                        </motion.div>
-
-                                        <p className="text-[10px] text-gray-600 mt-1 text-center font-bold">
-                                            {label}
-                                        </p>
-                                    </div>
-
-                                    {/* ARROW */}
-                                    {i !== 4 && (
-                                        <motion.span
-                                            className="text-navy-200 text-lg hidden sm:inline"
-                                            animate={{ x: [0, 5, 0] }}
-                                            transition={{ duration: 1, repeat: Infinity }}
-                                        >
-                                            →
-                                        </motion.span>
-                                    )}
-
-                                </React.Fragment>
-                            ))}
-
-                        </div>
-                    </div><div className="flex justify-between items-center mt-6 ">
-                        <span className="text-navy-600 font-bold">From idea to IPO</span>
-                        <span className="text-navy-600 font-bold">
-                            End-to-End Support
-                        </span>
-                    </div>
 
                 </div>
 
-
             </div>
         </section>
-    )
+    );
 }
 // Credibility Section
 function Credibility() {
@@ -614,43 +579,43 @@ function Metrics() {
     }
 
     return (
-       <section className="py-16 bg-white relative">
+        <section className="py-16 bg-white relative">
 
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* GRID */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                {/* GRID */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
 
-            {metrics.map((metric, i) => (
-                <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: i * 0.1 }}
-                    viewport={{ once: true }}
-                    className="p-8 rounded-2xl 
+                    {metrics.map((metric, i) => (
+                        <motion.div
+                            key={i}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: i * 0.1 }}
+                            viewport={{ once: true }}
+                            className="p-8 rounded-2xl 
                     bg-navy-700 text-white 
                     shadow-xl hover:shadow-2xl 
                     hover:-translate-y-2 transition-all duration-300"
-                >
+                        >
 
-                    {/* NUMBER */}
-                    <h3 className="text-4xl md:text-5xl font-bold mb-2">
-                        <Counter end={metric.number} suffix={metric.suffix} />
-                    </h3>
+                            {/* NUMBER */}
+                            <h3 className="text-4xl md:text-5xl font-bold mb-2">
+                                <Counter end={metric.number} suffix={metric.suffix} />
+                            </h3>
 
-                    {/* LABEL */}
-                    <p className="text-white/80 text-sm md:text-base">
-                        {metric.label}
-                    </p>
+                            {/* LABEL */}
+                            <p className="text-white/80 text-sm md:text-base">
+                                {metric.label}
+                            </p>
 
-                </motion.div>
-            ))}
+                        </motion.div>
+                    ))}
 
-        </div>
+                </div>
 
-    </div>
-</section>
+            </div>
+        </section>
     );
 }
 
@@ -764,7 +729,7 @@ function ServiceSnapshot() {
                     </button>
                 </div>
 
-                
+
             </div>
         </section>
     )
@@ -774,52 +739,52 @@ function CTABlock() {
     const navigate = useNavigate()
 
     return (
-    <section className="py-28 bg-white relative">
+        <section className="py-28 bg-white relative">
 
-    <motion.div
-        className="max-w-5xl mx-auto px-10 py-16 rounded-3xl 
+            <motion.div
+                className="max-w-5xl mx-auto px-10 py-16 rounded-3xl 
         border-2 border-navy-300 bg-navy-50 
         shadow-xl hover:shadow-2xl 
         hover:-translate-y-2 hover:scale-[1.01]
         transition-all duration-300 text-center"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-    >
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+            >
 
-        {/* HEADING */}
-        <h2 className="text-3xl md:text-4xl font-bold text-navy-700 mb-6">
-            Raising Capital or Looking to Invest?
-        </h2>
+                {/* HEADING */}
+                <h2 className="text-3xl md:text-4xl font-bold text-navy-700 mb-6">
+                    Raising Capital or Looking to Invest?
+                </h2>
 
-        <p className="text-gray-600 mb-10 text-lg">
-            Let's build something meaningful together.
-        </p>
+                <p className="text-gray-600 mb-10 text-lg">
+                    Let's build something meaningful together.
+                </p>
 
-        {/* BUTTONS */}
-        <div className="flex flex-col sm:flex-row justify-center gap-6">
+                {/* BUTTONS */}
+                <div className="flex flex-col sm:flex-row justify-center gap-6">
 
-            <button
-                onClick={() => navigate('/contact')}
-                className="bg-navy-700 hover:bg-navy-800 text-white px-10 py-4 rounded-full 
+                    <button
+                        onClick={() => navigate('/contact')}
+                        className="bg-navy-700 hover:bg-navy-800 text-white px-10 py-4 rounded-full 
                 font-semibold transition shadow-md hover:shadow-lg"
-            >
-                Submit Your Startup
-            </button>
+                    >
+                        Submit Your Startup
+                    </button>
 
-            <button
-                onClick={() => navigate('/contact')}
-                className="border-2 border-navy-400 text-navy-700 px-10 py-4 rounded-full 
+                    <button
+                        onClick={() => navigate('/contact')}
+                        className="border-2 border-navy-400 text-navy-700 px-10 py-4 rounded-full 
                 font-semibold transition hover:bg-navy-100"
-            >
-                Join Investor Network
-            </button>
+                    >
+                        Join Investor Network
+                    </button>
 
-        </div>
+                </div>
 
-    </motion.div>
-</section>
+            </motion.div>
+        </section>
     )
 }
 
