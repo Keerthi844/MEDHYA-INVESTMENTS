@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import servicesBanner from "../assets/images/service .png";
 
 export default function Services() {
   const location = useLocation();
@@ -16,20 +17,24 @@ export default function Services() {
   return (
     <div>
 
-      {/* ===== HEADER ===== */}
-      <section className="pt-28 pb-20 bg-white relative overflow-hidden">
-        {/* SKY BACKGROUND */}
-        <div className="absolute top-0 left-0 w-full h-[260px] bg-gradient-to-r from-navy-700 via-navy-700 to-navy-700 z-0"></div>
-        <div className="absolute -top-20 -left-20 w-72 h-72 bg-navy-200/30 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-navy-300/30 rounded-full blur-3xl"></div>
-
-        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Our <span className="text-white-300">Services</span>
-          </h1>
-          <p className="text-white/90 mt-3 max-w-xl mx-auto">
-            Comprehensive financial advisory tailored for every stage of the investment lifecycle.
-          </p>
+      {/* ===== HEADER WITH BANNER ===== */}
+      <section className="pt-0 pb-0 bg-white relative overflow-hidden">
+        {/* BANNER IMAGE CONTAINER */}
+        <div className="relative w-full h-[400px] md:h-[500px] lg:h-[550px] overflow-hidden">
+          <img
+            src={servicesBanner}
+            alt="Services"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Our <span className="text-white">Services</span>
+            </h1>
+            <p className="text-white/90 mt-3 max-w-xl mx-auto">
+              Comprehensive financial advisory tailored for every stage of the investment lifecycle.
+            </p>
+          </div>
         </div>
       </section>
 

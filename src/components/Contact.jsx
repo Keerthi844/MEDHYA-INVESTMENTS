@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import contactBanner from "../assets/images/contact.png";
 
 function ContactSection() {
   useEffect(() => {
@@ -7,24 +8,28 @@ function ContactSection() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <section className="pt-28 pb-20 bg-white relative overflow-hidden">
-      {/* SKY BACKGROUND */}
-      <div className="absolute top-0 left-0 w-full h-[260px] bg-gradient-to-r from-navy-700 via-navy-700 to-navy-700 z-0"></div>
-      <div className="absolute -top-20 -left-20 w-72 h-72 bg-navy-200/30 rounded-full blur-3xl"></div>
-      <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-navy-300/30 rounded-full blur-3xl"></div>
-
-      <div className="relative z-10 max-w-5xl mx-auto px-4">
-
-        {/* HEADER */}
-        <div className="text-center mb-12 px-10">
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
+    <>
+      {/* BANNER SECTION */}
+      <section className="relative w-full h-[400px] md:h-[500px] lg:h-[550px] overflow-hidden">
+        <img
+          src={contactBanner}
+          alt="Contact Us"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Get in <span className="text-white">Touch</span>
           </h2>
-
-          <p className="text-white/80 mt-3 max-w-xl mx-auto">
+          <p className="text-white/90 mt-3 max-w-xl mx-auto">
             Whether you're a startup seeking capital or an investor seeking opportunity we're here to help.
           </p>
         </div>
+      </section>
+
+      {/* CONTENT SECTION */}
+      <section className="pt-20 pb-20 bg-white relative overflow-hidden">
+      <div className="relative z-10 max-w-5xl mx-auto px-4">
 
         {/* GRID */}
         <div className="grid md:grid-cols-2 gap-10">
@@ -143,7 +148,8 @@ function ContactSection() {
         </div>
 
       </div>
-    </section>
+      </section>
+    </>
   );
 }
 

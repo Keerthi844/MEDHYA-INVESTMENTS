@@ -15,26 +15,30 @@ export default function Header() {
 
   return (
     <header className="bg-white border-b border-navy-200 fixed top-0 w-full z-50 shadow-sm">
-      
+
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
 
         {/* LOGO */}
         <div className="flex items-center gap-3">
-        
-            <img
-              src={medhyaLogo}
-              alt="Medhya Logo"
-              className="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover"
-            />
-        
-          <h1 className="leading-tight">
-            <span className="block text-base sm:text-xl font-bold text-navy-600">
+
+          <img
+            src={medhyaLogo}
+            alt="Medhya Logo"
+            className="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover"
+          />
+
+          <div className="leading-tight">
+            <h1 className="text-base sm:text-xl font-bold text-navy-600">
               MEDHYA
-            </span>
-            <span className="block text-[10px] sm:text-xs text-gray-500 tracking-widest">
-              INVESTMENT
-            </span>
-          </h1>
+            </h1>
+            <p className="text-base sm:text-xl font-bold text-navy-600">
+               INVESTMENTS
+            </p>
+
+            <p className="text-[10px] sm:text-[10px] text-blue-800 leading-tight whitespace-nowrap mt-0.5 font-semibold">
+              Empowering Wealth. Enabling Growth.
+            </p>
+          </div>
         </div>
 
         {/* DESKTOP MENU ✅ */}

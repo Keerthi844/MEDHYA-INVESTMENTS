@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { FaLightbulb, FaBullseye, FaChartBar, FaChartLine, FaUserTie, FaShieldAlt, FaCheckCircle } from 'react-icons/fa'
 import { motion } from 'framer-motion'
-import homeBannerImage from '../assets/images/home banner.jpg'
+import homeBannerImage from '../assets/images/home.png'
 
 
 // Hero Section

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import aboutBanner from "../assets/images/about banner.jpg"
+import aboutBanner from "../assets/images/aboutimage.png"
 
 function AboutSection() {
 
@@ -10,11 +10,11 @@ function AboutSection() {
   }, []);
 
   const team = [
-    { initials: "DK", name: "Devender Kodam", role: "Managing Director" },
-    { initials: "SS", name: "Sri Swathi", role: "Financial Advisory" },
-    { initials: "SR", name: "Sri Rakesh", role: "Transaction Advisory" },
-    { initials: "YU", name: "Yugendar", role: "Investment Strategy" },
-    { initials: "JR", name: "Jaipal Reddy Naidi", role: "Legal & Compliance" },
+    { initials: "DK", name: "Devender Kodam", role: "Managing Director", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" },
+    { initials: "SS", name: "Sri Swathi", role: "Financial Advisory", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop" },
+    { initials: "SR", name: "Sri Rakesh", role: "Transaction Advisory", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop" },
+    { initials: "YU", name: "Yugendar", role: "Investment Strategy", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" },
+    { initials: "JR", name: "Jaipal Reddy Naidi", role: "Legal & Compliance", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop" },
   ];
 
   const tags = [
@@ -182,12 +182,14 @@ function AboutSection() {
       shadow-md hover:shadow-xl hover:-translate-y-2 transition w-full max-w-[220px] mx-auto"
               >
 
-                {/* CIRCLE */}
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full 
-      flex items-center justify-center text-white-600 font-bold text-lg
-      border-2 border-navy-300 bg-navy-50
-      hover:bg-navy-500 hover:text-white transition">
-                  {member.initials}
+                {/* IMAGE */}
+                <div className="w-20 h-20 mx-auto mb-4 rounded-full overflow-hidden 
+      border-3 border-navy-300 bg-navy-50 flex-shrink-0">
+                  <img 
+                    src={member.image} 
+                    alt={member.name}
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
                 {/* NAME */}

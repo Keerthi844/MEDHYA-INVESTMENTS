@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { FaUsers, FaChartLine, FaExchangeAlt, FaHandshake, FaCogs } from "react-icons/fa";
+import pricingBanner from "../assets/images/pricing.png";
 
 function WhyChoose() {
   useEffect(() => {
@@ -61,23 +62,28 @@ function WhyChoose() {
   ];
 
   return (
-    <section className="pt-28 pb-20 bg-white relative overflow-hidden">
-    {/* SKY BACKGROUND */}
-    <div className="absolute top-0 left-0 w-full h-[260px] bg-gradient-to-r from-navy-700 via-navy-700 to-navy-700 z-0"></div>
-      <div className="absolute -top-20 -left-20 w-72 h-72 bg-navy-200/30 rounded-full blur-3xl"></div>
-      <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-navy-300/30 rounded-full blur-3xl"></div>
-
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
-
-        {/* HEADING */}
-        <div className="text-center mb-12 px-0 sm:px-6">
+    <>
+      {/* BANNER SECTION */}
+      <section className="relative w-full h-[400px] md:h-[500px] lg:h-[550px] overflow-hidden">
+        <img
+          src={pricingBanner}
+          alt="Pricing"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-            Why Choose <span className="text-white-300">Medhya</span>
+            Why Choose <span className="text-white">Medhya</span>
           </h2>
           <p className="text-white/90 mt-3 text-sm sm:text-base">
             Five pillars that define our commitment to excellence.
           </p>
         </div>
+      </section>
+
+      {/* CONTENT SECTION */}
+      <section className="pt-20 pb-20 bg-white relative overflow-hidden">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
 
         {/* CARDS */}
         <div className="space-y-4 sm:space-y-6 mt-20">
@@ -127,7 +133,8 @@ function WhyChoose() {
         </div>
 
       </div>
-    </section>
+      </section>
+    </>
   );
 }
 
