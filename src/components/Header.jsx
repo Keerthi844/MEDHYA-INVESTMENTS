@@ -24,16 +24,16 @@ export default function Header() {
           <img
             src={medhyaLogo}
             alt="Medhya Logo"
-            className="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover"
+            className="h-15 w-12 sm:h-12 sm:w-12 rounded object-cover"
           />
 
           <div className="leading-tight">
-            <h1 className="text-base sm:text-xl font-bold text-navy-600">
+            <h2 className="text-[13px] font-bold text-navy-600">
               MEDHYA
-            </h1>
-            <p className="text-base sm:text-xl font-bold text-navy-600">
+            </h2>
+            <h3 className="text-[12px]  font-bold text-navy-600">
                INVESTMENTS
-            </p>
+            </h3>
 
             <p className="text-[10px] sm:text-[10px] text-blue-800 leading-tight whitespace-nowrap mt-0.5 font-semibold">
               Empowering Wealth. Enabling Growth.

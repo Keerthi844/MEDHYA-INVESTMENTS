@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
-import contactBanner from "../assets/images/contactimage.jpg";
+import contactBanner from "../assets/images/contact.jpg";
 
 function ContactSection() {
   useEffect(() => {
